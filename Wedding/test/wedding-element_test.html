@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-    <title>wedding-home test</title>
+    <title>wedding-element test</title>
 
     <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <script src="../node_modules/@polymer/test-fixture/test-fixture.js"></script>
@@ -12,31 +12,31 @@
     <script src="../node_modules/chai/chai.js"></script>
     <script src="../node_modules/wct-mocha/wct-mocha.js"></script>
 
-    <script type="module" src="../wedding-home.js"></script>
+    <script type="module" src="../wedding-element.js"></script>
   </head>
   <body>
 
     <test-fixture id="BasicTestFixture">
       <template>
-        <wedding-home></wedding-home>
+        <wedding-element></wedding-element>
       </template>
     </test-fixture>
 
     <test-fixture id="ChangedPropertyTestFixture">
       <template>
-        <wedding-home prop1="new-prop1"></wedding-home>
+        <wedding-element prop1="new-prop1"></wedding-element>
       </template>
     </test-fixture>
 
     <script type="module">
-      suite('wedding-home', () => {
+      suite('wedding-element', () => {
 
         test('instantiating the element with default properties works', () => {
           const element = fixture('BasicTestFixture');
-          assert.equal(element.prop1, 'wedding-home');
+          assert.equal(element.prop1, 'wedding-element');
           const elementShadowRoot = element.shadowRoot;
           const elementHeader = elementShadowRoot.querySelector('h2');
-          assert.equal(elementHeader.innerHTML, 'Hello wedding-home!');
+          assert.equal(elementHeader.innerHTML, 'Hello wedding-element!');
         });
 
         test('setting a property on the element works', () => {

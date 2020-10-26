@@ -1,14 +1,14 @@
 import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
 
 /**
- * `wedding-home`
- * home page of the wedding web site
+ * `wedding-element`
+ * 
  *
  * @customElement
  * @polymer
  * @demo demo/index.html
  */
-class WeddingHome extends PolymerElement {
+class WeddingElement extends PolymerElement {
   static get template() {
     return html`
       <style>
@@ -23,10 +23,10 @@ class WeddingHome extends PolymerElement {
     return {
       prop1: {
         type: String,
-        value: 'wedding-home',
+        value: 'wedding-element',
       },
     };
   }
 }
 
-window.customElements.define('wedding-home', WeddingHome);
+window.customElements.define('wedding-element', WeddingElement);

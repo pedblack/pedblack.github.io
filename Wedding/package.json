@@ -1,7 +1,6 @@
 {
-  "name": "wedding-home",
-  "description": "home page of the wedding web site",
-  "main": "wedding-home.js",
+  "name": "wedding-element",
+  "main": "wedding-element.js",
   "dependencies": {
     "@polymer/polymer": "^3.0.0"
   },

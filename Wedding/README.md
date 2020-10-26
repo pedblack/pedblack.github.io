@@ -1,6 +1,6 @@
-# \<wedding-home\>
+# \<wedding-element\>
 
-home page of the wedding web site
+
 
 ## Install the Polymer-CLI
 
