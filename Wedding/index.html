@@ -1,13 +1,7 @@
 <!doctype html>
 <html>
-<style>
-  img {
-    /*width:400px;*/
-    /*height:400px;*/
-    object-fit: contain;
-  }
-</style>
 <head>
+  <link rel="stylesheet" href="main.css">
   <script>
     function resizeToMax(id){
       myImage = new Image() 
@@ -22,13 +16,23 @@
   </script>
   <script type="module" src="./wedding-element.js"></script>
   <meta charset="utf-8">
-  <!-- <meta http-equiv="refresh" content="0;url=demo/" /> -->
   <title>wedding-element</title>
 </head>
 <body>
-  <div class="vertical-section-container centered">
-    <!-- <wedding-element></wedding-element> -->
-    <img src='images/watercolor_pink.jpg' id="background" onload="resizeToMax(this.id)"/>  
-  </div>
+  <section id="hero" class="pane">
+    <div class="pane-title" id="site-title-pane">
+      <h1>AURORE &amp; PEDRO</h1>
+      <p class="byline">are getting married</p>
+    </div>
+    <div class="scrollplz">
+      <p>SCROLL FOR MORE</p>
+      <svg id="scrollplz-arrow" height="50px" viewBox="0 0 5 27" stroke="none" fill="currentColor">
+        <rect x="2" y="0" width="1" height="23"></rect>
+        <path d="M0,22.244 L2.493,26.562 L4.986,22.244 L0,22.244 Z"></path>
+      </svg>
+    </div>
+  </section>
+  <!-- <wedding-element></wedding-element> -->
+  <!-- <img class='pane' src='images/watercolor_yellow.jpg' id="hero"/>   -->
 </body>
 </html>
