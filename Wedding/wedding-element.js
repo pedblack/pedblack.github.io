@@ -6,9 +6,8 @@ import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
  *
  * @customElement
  * @polymer
- * @demo demo/index.html
  */
-class WeddingElement extends PolymerElement {
+export class WeddingElement extends PolymerElement {
   static get template() {
     return html`
       <style>
@@ -19,6 +18,7 @@ class WeddingElement extends PolymerElement {
       <h2>Hello [[prop1]]!</h2>
     `;
   }
+
   static get properties() {
     return {
       prop1: {
@@ -26,6 +26,10 @@ class WeddingElement extends PolymerElement {
         value: 'wedding-element',
       },
     };
+  }
+
+  constructor() {
+    super();
   }
 }
 
