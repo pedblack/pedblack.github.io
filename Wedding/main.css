@@ -1044,7 +1044,7 @@ input[type=submit].link-button.golden:hover {
 	background-image: url("images/watercolor_yellow2.jpg");
 	-webkit-background-size: cover;
 	background-size: cover;
-	color: #9c14f7;
+	color: #4b4a96;
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
@@ -1346,7 +1346,7 @@ input[type=submit].link-button.golden:hover {
 	-webkit-align-self: flex-end;
 	-ms-flex-item-align: end;
 	align-self: flex-end;
-	text-align: right
+	text-align: center;
 }
 
 #schedule .day {
@@ -1355,6 +1355,10 @@ input[type=submit].link-button.golden:hover {
 	padding-bottom: .5em;
 	margin: 0 auto;
 	border-bottom: 4px solid transparent
+}
+
+#schedule-body {
+	padding-top: 1.5em;
 }
 
 #schedule .day.active {
