@@ -1346,7 +1346,7 @@ input[type=submit].link-button.golden:hover {
 	-webkit-align-self: flex-end;
 	-ms-flex-item-align: end;
 	align-self: flex-end;
-	text-align: center;
+	text-align: right
 }
 
 #schedule .day {
@@ -1355,10 +1355,6 @@ input[type=submit].link-button.golden:hover {
 	padding-bottom: .5em;
 	margin: 0 auto;
 	border-bottom: 4px solid transparent
-}
-
-#schedule-body {
-	padding-top: 1.5em;
 }
 
 #schedule .day.active {
