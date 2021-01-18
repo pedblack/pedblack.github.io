@@ -53,6 +53,15 @@
       document.getElementById("schedule-sunday-header").classList.add("active");
       document.getElementById("schedule-sunday").style.display = "block";
     }
+    function onClickAddCalendar(element) {
+      element.classList.toggle("addthisevent-selected");
+      var dropdown = document.getElementById("atedrop1-drop");
+      if (dropdown.style.display === "none") {
+        dropdown.style.display = "block";
+      } else {
+        dropdown.style.display = "none";
+      }
+    }
   </script>
 </head>
 <body>
@@ -131,7 +140,14 @@
           <p class="larger">September 11, 2021</p>
           <p class="sans-caps">A SATURDAY</p>
           <p>
-            <a href="#" title="" class=" link-button addthisevent-drop" id="atedrop1">Add to Calendar</a>
+            <a title="" class=" link-button addthisevent-drop" id="atedrop1" onclick="onClickAddCalendar(this)">Add to Calendar
+              <span id="atedrop1-drop" class="addthisevent_dropdown" style="left: 0px; top: 44px; display: none;">
+                <span class="ategoogle" onclick="location.href = 'https://www.addevent.com/event/dU5910787+google'">Google</span>
+                <span class="ateical" onclick="location.href = 'https://www.addevent.com/event/dU5910787+apple'">Apple</span>
+                <span class="ateoutlook" onclick="location.href = 'https://www.addevent.com/event/dU5910787+outlook'">Outlook</span>
+                <span class="atehotmail" onclick="location.href = 'https://www.addevent.com/event/dU5910787+office365'">Apple</span>
+              </span>
+            </a>
           </p>
         </div>
         <div class="where">
