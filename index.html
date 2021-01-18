@@ -62,6 +62,9 @@
         dropdown.style.display = "none";
       }
     }
+    function onClickMenu() {
+      document.getElementById("mobile-menu").classList.toggle("show");
+    }
   </script>
 </head>
 <body>
@@ -69,10 +72,10 @@
     <div>
       <div class="navigation-wrapper centered-navigation">
         <nav>
-          <div class="nav-mobile-menu">
+          <div class="nav-mobile-menu" onclick="onClickMenu()">
             <a class="mobile-menu" href="#">Menu</a>
           </div>
-          <ul class="centered-navigation-menu" >
+          <ul id="mobile-menu" class="centered-navigation-menu">
             <li class="nav-link">
               <a href="#destination">DESTINATION</a>
             </li>
