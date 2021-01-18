@@ -40,8 +40,7 @@ ul {
 	padding: 0
 }
 
-#activity,
-#wedding-party {
+#activity {
 	background-color: #fdf8f7
 }
 
@@ -85,7 +84,7 @@ input[type=submit] {
 	-o-appearance: none;
 	appearance: none;
 	-webkit-font-smoothing: antialiased;
-	background-color: #b18f3a;
+	background-color: #cca543;
 	border: none;
 	color: #fff;
 	cursor: pointer;
@@ -175,8 +174,8 @@ a {
 a:active,
 a:focus,
 a:hover {
-	border-bottom: 1px solid #b18f3a;
-	color: #b18f3a;
+	border-bottom: 1px solid #cca543;
+	color: #cca543;
 	background: rgba(177, 143, 58, .2)
 }
 
@@ -251,23 +250,38 @@ html {
 #registry .underline,
 #schedule .underline,
 #wedding-party .underline {
-	border-color: #b18f3a
+	border-color: #cca543
 }
 
 #schedule {
-	background-color: #f4f1e0
+	/*background-color: #fff4d1*/
+	background-color: #5655b5;
+	color: #fff
 }
+
+#schedule a {
+	color: #fff
+}
+
+#schedule .schedule-item a {
+	color: #cca543
+}
+
 
 #lodging {
 	background-color: #ffece8
 }
 
 #playlist {
-	background-color: #fceab1
+	background-color: #fff4d1
 }
 
 #photos {
-	background-color: #f4f1e0
+	background-color: #f2f2f2
+}
+
+#photos h2 {
+	color: #cca543
 }
 
 #thanks {
@@ -333,7 +347,7 @@ input[type=submit].link-button {
 input[type=submit].link-button:active,
 input[type=submit].link-button:focus,
 input[type=submit].link-button:hover {
-	color: #b18f3a;
+	color: #cca543;
 	background-color: #fff;
 	border-bottom-width: 2px;
 	border-color: #fff
@@ -341,8 +355,8 @@ input[type=submit].link-button:hover {
 
 .link-button.golden,
 input[type=submit].link-button.golden {
-	color: #b18f3a;
-	border-color: #b18f3a
+	color: #cca543;
+	border-color: #cca543
 }
 
 .link-button.golden:active,
@@ -352,8 +366,8 @@ input[type=submit].link-button.golden:active,
 input[type=submit].link-button.golden:focus,
 input[type=submit].link-button.golden:hover {
 	color: #fff;
-	background-color: #b18f3a;
-	border-color: #b18f3a
+	background-color: #cca543;
+	border-color: #cca543
 }
 
 @media screen and (max-width:667px) {
@@ -404,16 +418,16 @@ input[type=submit].link-button.golden:hover {
 	display: inline-block;
 	position: relative;
 	z-index: 49;
-	color: #b18f3a;
+	color: #cca543;
 	text-decoration: none;
-	border-color: #b18f3a
+	border-color: #cca543
 }
 
 .addthisevent-drop:hover {
 	color: #fff;
 	text-decoration: none;
-	background: #b18f3a;
-	border-color: #b18f3a
+	background: #cca543;
+	border-color: #cca543
 }
 
 .addthisevent_dropdown {
@@ -421,7 +435,7 @@ input[type=submit].link-button.golden:hover {
 	position: absolute;
 	z-index: 50;
 	padding: 0;
-	background: #b18f3a;
+	background: #cca543;
 	text-align: left;
 	display: none;
 	margin-top: -2px;
@@ -441,7 +455,7 @@ input[type=submit].link-button.golden:hover {
 
 .addthisevent_dropdown span:hover {
 	background: #fff;
-	color: #b18f3a;
+	color: #cca543;
 	text-decoration: none;
 	font-size: 9pt
 }
@@ -507,7 +521,7 @@ input[type=submit].link-button.golden:hover {
 }
 
 .addthisevent_dropdown .frs:hover {
-	color: #b18f3a
+	color: #cca543
 }
 
 .addthisevent {
@@ -559,7 +573,7 @@ input[type=submit].link-button.golden:hover {
 	overflow-y: scroll;
 	background: #fff;
 	position: relative;
-	border: 4px solid #b18f3a;
+	border: 4px solid #cca543;
 	z-index: 202
 }
 
@@ -572,7 +586,7 @@ input[type=submit].link-button.golden:hover {
 
 #overlay-container #overlay .overlayBack:hover {
 	cursor: pointer;
-	color: #b18f3a;
+	color: #cca543;
 	background: 0 0
 }
 
@@ -620,7 +634,7 @@ input[type=submit].link-button.golden:hover {
 		height: 0
 	}
 	#overlay-container .indicate-overflow {
-		background-color: #b18f3a;
+		background-color: #cca543;
 		left: 0;
 		right: 0;
 		bottom: 0;
@@ -693,7 +707,7 @@ input[type=submit].link-button.golden:hover {
 
 #rsvp-banner a:hover {
 	background: 0 0;
-	color: #b18f3a
+	color: #cca543
 }
 
 #overlay-container #overlay.rsvp.notComing .link-button,
@@ -705,11 +719,11 @@ input[type=submit].link-button.golden:hover {
 }
 
 #overlay-container #overlay.rsvp {
-	border-color: #b18f3a
+	border-color: #cca543
 }
 
 #overlay-container #overlay.rsvp .underline {
-	border-color: #b18f3a;
+	border-color: #cca543;
 	margin-bottom: 2em
 }
 
@@ -757,7 +771,7 @@ input[type=submit].link-button.golden:hover {
 
 #overlay-container #overlay.rsvp.start,
 #overlay-container #overlay.rsvp.start .underline {
-	border-color: #b18f3a
+	border-color: #cca543
 }
 
 #overlay-container #overlay.rsvp.otherEvents {
@@ -832,7 +846,7 @@ input[type=submit].link-button.golden:hover {
 
 .rsvp-person-show .rsvp-person-answer.checked {
 	color: #000;
-	border-bottom: 4px solid #b18f3a
+	border-bottom: 4px solid #cca543
 }
 
 @media screen and (max-width:667px) {
@@ -877,6 +891,10 @@ input[type=submit].link-button.golden:hover {
 .pane .pane-title,
 .pane .title-section {
 	margin-bottom: 2em
+}
+
+.pane-title {
+
 }
 
 .pane .pane-content {
@@ -947,7 +965,7 @@ input[type=submit].link-button.golden:hover {
 
 .centered-navigation .nav-mobile-menu:focus,
 .centered-navigation .nav-mobile-menu:hover {
-	color: #b18f3a
+	color: #cca543
 }
 
 .centered-navigation .navigation-wrapper {
@@ -1021,7 +1039,7 @@ input[type=submit].link-button.golden:hover {
 .centered-navigation ul li.nav-link a:focus,
 .centered-navigation ul li.nav-link a:hover {
 	background: 0 0;
-	color: #b18f3a
+	color: #cca543
 }
 
 @media screen and (min-width:768px) {
@@ -1122,7 +1140,7 @@ input[type=submit].link-button.golden:hover {
 }
 
 #overview h2 {
-	color: #b18f3a
+	color: #cca543
 }
 
 #overview #when-icon,
@@ -1366,12 +1384,12 @@ input[type=submit].link-button.golden:hover {
 }
 
 #schedule .day.active {
-	border-bottom: 4px solid #b18f3a
+	border-bottom: 4px solid #cca543
 }
 
 #schedule .day:hover {
 	background: 0 0;
-	color: #b18f3a;
+	color: #cca543;
 	cursor: pointer
 }
 
@@ -1435,7 +1453,7 @@ input[type=submit].link-button.golden:hover {
 	text-decoration: none;
 	border: none;
 	font-weight: 700;
-	color: #b18f3a;
+	color: #cca543;
 	padding-left: .5em;
 	padding-right: .5em
 }
@@ -1645,7 +1663,8 @@ input[type=submit].link-button.golden:hover {
 #wedding-party h5.party-person-description {
 	font-size: .875rem;
 	letter-spacing: .2em;
-	text-transform: uppercase
+	text-transform: uppercase;
+	color: #cca543
 }
 
 @media screen and (max-width:667px) {
@@ -1726,7 +1745,7 @@ input[type=submit].link-button.golden:hover {
 }
 
 #registry {
-	background-image: url(https://s3.amazonaws.com/ameliaandsteveassets/plants.jpg);
+	background-image: url("images/flowers.jpg");
 	-webkit-background-size: cover;
 	background-size: cover;
 	min-height: 90vh
@@ -1823,7 +1842,7 @@ input[type=submit].link-button.golden:hover {
 #faq .faq h5 a:hover {
 	background: 0 0;
 	cursor: pointer;
-	color: #b18f3a
+	color: #cca543
 }
 
 #faq .faq .faq-answer {
