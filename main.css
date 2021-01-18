@@ -268,7 +268,6 @@ html {
 	color: #cca543
 }
 
-
 #lodging {
 	background-color: #ffece8
 }
@@ -1351,15 +1350,14 @@ input[type=submit].link-button.golden:hover {
 
 #schedule .day-labels li {
 	display: block;
-	-webkit-flex-grow: 1;
-	-ms-flex-positive: 1;
-	flex-grow: 1
+	width: 33.33%
 }
 
 #schedule .day-labels li:first-child {
 	-webkit-align-self: flex-start;
 	-ms-flex-item-align: start;
-	align-self: flex-start
+	align-self: flex-start;
+	text-align: left
 }
 
 #schedule .day-labels li:nth-child(2) {
