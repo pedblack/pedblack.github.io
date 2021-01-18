@@ -249,6 +249,7 @@ html {
 #lodging .underline,
 #registry .underline,
 #schedule .underline,
+#photos .underline,
 #wedding-party .underline {
 	border-color: #cca543
 }
@@ -273,14 +274,14 @@ html {
 }
 
 #playlist {
-	background-color: #fff4d1
-}
-
-#photos {
 	background-color: #f2f2f2
 }
 
-#photos h2 {
+#photos {
+	background-color: #fff4d1
+}
+
+#registry h2 {
 	color: #cca543
 }
 
