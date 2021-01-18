@@ -259,7 +259,15 @@ html {
 }
 
 #lodging {
-	background-color: #f9ded8
+	background-color: #ffece8
+}
+
+#playlist {
+	background-color: #fceab1
+}
+
+#photos {
+	background-color: #f4f1e0
 }
 
 #thanks {
