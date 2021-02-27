@@ -66,6 +66,10 @@
          function hideMobileMenu() {
            document.getElementById("mobile-menu").classList.remove("show");
          }
+         function onClickFaq(faq) {
+           var response = faq.parentNode.parentNode.getElementsByTagName("div")[0];
+           response.classList.toggle("show");
+         }
       </script>
    </head>
    <body>
@@ -514,26 +518,26 @@
             </div>
             <div class="faq-section">
                <div class="faq">
-                  <h5><a href="#">When should I arrive and how long should I stay?</a></h5>
+                  <h5><a onclick="onClickFaq(this)">When should I arrive and how long should I stay?</a></h5>
                   <div class="faq-answer">
                      <p>Most of the events kick off on Friday night and end on Sunday afternoon, but please enjoy the area for as long as you're able.</p>
                   </div>
                </div>
                <div class="faq">
-                  <h5><a href="#">Any tips on what should I wear? </a></h5>
+                  <h5><a onclick="onClickFaq(this)">Any tips on what should I wear? </a></h5>
                   <div class="faq-answer">
                      <p>Weather permitting, the ceremony and parts of the reception will be outdoors, so shoes that can traverse gravel and grass would make your life easier.</p>
                      <p>Dress code: Elegant.</p>
                   </div>
                </div>
                <div class="faq">
-                  <h5><a href="#">Should I pack anything special?</a></h5>
+                  <h5><a onclick="onClickFaq(this)">Should I pack anything special?</a></h5>
                   <div class="faq-answer">
                      <p>The wedding venue has a swimming pool so, if the weather is right and you would like to take a swim on Sunday, pack a bathing suit.</p>
                   </div>
                </div>
                <div class="faq">
-                  <h5><a href="#">What is the weather like in the region this time of year?</a></h5>
+                  <h5><a onclick="onClickFaq(this)">What is the weather like in the region this time of year?</a></h5>
                   <div class="faq-answer">
                      <p>In the beginning of September, Cintegabelle averages a high of 24°C and a low of 14°C. For a more detailed view 
 						 <a href="https://fr.weatherspark.com/m/46191/9/M%C3%A9t%C3%A9o-habituelle-en-septembre-%C3%A0-Cintegabelle-France#Sections-Temperature">check this website</a>
@@ -541,7 +545,7 @@
                   </div>
                </div>
                <div class="faq">
-                  <h5><a href="#">Will you be accommodating any diet restrictions?</a></h5>
+                  <h5><a onclick="onClickFaq(this)">Will you be accommodating any diet restrictions?</a></h5>
                   <div class="faq-answer">
                      <p>We will accommodatingmodate vegetarian meals so please let us know in the RSVP if that is your preferred choice. If you have any other dietary concerns, feel free to let us know so we can explore options for you!</p>
                   </div>
