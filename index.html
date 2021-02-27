@@ -1,557 +1,547 @@
 <!doctype html>
 <html>
-   <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta http-equiv="Content-Language" content="en">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      <link rel="icon" type="image/x-icon" href="images/logo/favicon.ico">
-      <title>Aurore &amp; Pedro</title>
-      <script>try{Typekit.load();}catch(e){}</script>
-      <style type="text/css">.addthisevent {visibility:hidden;}.addthisevent-drop ._url,.addthisevent-drop ._start,.addthisevent-drop ._end,.addthisevent-drop ._zonecode,.addthisevent-drop ._summary,.addthisevent-drop ._description,.addthisevent-drop ._location,.addthisevent-drop ._organizer,.addthisevent-drop ._organizer_email,.addthisevent-drop ._attendees,.addthisevent-drop ._facebook_event,.addthisevent-drop ._all_day_event {display:none!important;}</style>
-      <link rel="stylesheet" href="main.css">
-      <script>
-         function resizeToMax(id){
-           myImage = new Image() 
-           var img = document.getElementById(id);
-           myImage.src = img.src; 
-           if(myImage.width > myImage.height){
-             img.style.width = "100%";
-           } else {
-             img.style.height = "100%";
-           }
-         }
-      </script>
-      <meta charset="utf-8">
-      <script type="text/javascript">
-         function onClickFriday() {
-           document.getElementById("schedule-friday-header").classList.remove("active");
-           document.getElementById("schedule-friday-header").classList.add("active");
-           document.getElementById("schedule-friday").style.display = "block";
-           document.getElementById("schedule-saturday-header").classList.remove("active");
-           document.getElementById("schedule-saturday").style.display = "none";
-           document.getElementById("schedule-sunday-header").classList.remove("active");
-           document.getElementById("schedule-sunday").style.display = "none";
-         }
-         function onClickSaturday() {
-           document.getElementById("schedule-friday-header").classList.remove("active");
-           document.getElementById("schedule-friday").style.display = "none";
-           document.getElementById("schedule-saturday-header").classList.remove("active");
-           document.getElementById("schedule-saturday-header").classList.add("active");
-           document.getElementById("schedule-saturday").style.display = "block";
-           document.getElementById("schedule-sunday-header").classList.remove("active");
-           document.getElementById("schedule-sunday").style.display = "none";
-         }
-         function onClickSunday() {
-           document.getElementById("schedule-friday-header").classList.remove("active");
-           document.getElementById("schedule-friday").style.display = "none";
-           document.getElementById("schedule-saturday-header").classList.remove("active");
-           document.getElementById("schedule-saturday").style.display = "none";
-           document.getElementById("schedule-sunday-header").classList.remove("active");
-           document.getElementById("schedule-sunday-header").classList.add("active");
-           document.getElementById("schedule-sunday").style.display = "block";
-         }
-         function onClickAddCalendar(element) {
-           element.classList.toggle("addthisevent-selected");
-           var dropdown = document.getElementById("atedrop1-drop");
-           if (dropdown.style.display === "none") {
-             dropdown.style.display = "block";
-           } else {
-             dropdown.style.display = "none";
-           }
-         }
-         function onClickMenu() {
-           document.getElementById("mobile-menu").classList.toggle("show");
-         }
-         function hideMobileMenu() {
-           document.getElementById("mobile-menu").classList.remove("show");
-         }
-         function onClickFaq(faq) {
-           var response = faq.parentNode.parentNode.getElementsByTagName("div")[0];
-           response.classList.toggle("show");
-         }
-      </script>
-   </head>
-   <body>
-      <div id="header">
-         <div>
-            <div class="navigation-wrapper centered-navigation">
-               <nav>
-                  <div class="nav-mobile-menu" onclick="onClickMenu()">
-                     <a class="mobile-menu">Menu</a>
-                  </div>
-                  <ul id="mobile-menu" class="centered-navigation-menu">
-                     <li class="nav-link" onclick="hideMobileMenu()">
-                        <a href="#overview">RSVP</a>
-                     </li>
-                     <li class="nav-link" onclick="hideMobileMenu()">
-                        <a href="#schedule">SCHEDULE</a>
-                     </li>
-                     <li class="nav-link mobile-only" onclick="hideMobileMenu()">
-                        <a href="#getting-there">GETTING THERE</a>
-                     </li>
-                     <li class="nav-link" onclick="hideMobileMenu()">
-                        <a href="#lodging">LODGING</a>
-                     </li>
-                     <li class="nav-link mobile-only" onclick="hideMobileMenu()">
-                        <a href="#wedding-party">WEDDING PARTY</a>
-                     </li>
-                     <li class="nav-link mobile-only" onclick="hideMobileMenu()">
-                        <a href="#registry">REGISTRY</a>
-                     </li>
-                     <li class="nav-link" onclick="hideMobileMenu()">
-                        <a href="#faq">FAQ</a>
-                     </li>
-                  </ul>
-               </nav>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="images/logo/favicon.ico">
+    <title>Aurore &amp; Pedro</title>
+    <script>try{Typekit.load();}catch(e){}</script>
+    <style type="text/css">.addthisevent {visibility:hidden;}.addthisevent-drop ._url,.addthisevent-drop ._start,.addthisevent-drop ._end,.addthisevent-drop ._zonecode,.addthisevent-drop ._summary,.addthisevent-drop ._description,.addthisevent-drop ._location,.addthisevent-drop ._organizer,.addthisevent-drop ._organizer_email,.addthisevent-drop ._attendees,.addthisevent-drop ._facebook_event,.addthisevent-drop ._all_day_event {display:none!important;}</style>
+    <link rel="stylesheet" href="main.css">
+    <script>
+      function resizeToMax(id){
+        myImage = new Image() 
+        var img = document.getElementById(id);
+        myImage.src = img.src; 
+        if(myImage.width > myImage.height){
+          img.style.width = "100%";
+        } else {
+          img.style.height = "100%";
+        }
+      }
+    </script>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+      function onClickFriday() {
+        document.getElementById("schedule-friday-header").classList.remove("active");
+        document.getElementById("schedule-friday-header").classList.add("active");
+        document.getElementById("schedule-friday").style.display = "block";
+        document.getElementById("schedule-saturday-header").classList.remove("active");
+        document.getElementById("schedule-saturday").style.display = "none";
+        document.getElementById("schedule-sunday-header").classList.remove("active");
+        document.getElementById("schedule-sunday").style.display = "none";
+      }
+      function onClickSaturday() {
+        document.getElementById("schedule-friday-header").classList.remove("active");
+        document.getElementById("schedule-friday").style.display = "none";
+        document.getElementById("schedule-saturday-header").classList.remove("active");
+        document.getElementById("schedule-saturday-header").classList.add("active");
+        document.getElementById("schedule-saturday").style.display = "block";
+        document.getElementById("schedule-sunday-header").classList.remove("active");
+        document.getElementById("schedule-sunday").style.display = "none";
+      }
+      function onClickSunday() {
+        document.getElementById("schedule-friday-header").classList.remove("active");
+        document.getElementById("schedule-friday").style.display = "none";
+        document.getElementById("schedule-saturday-header").classList.remove("active");
+        document.getElementById("schedule-saturday").style.display = "none";
+        document.getElementById("schedule-sunday-header").classList.remove("active");
+        document.getElementById("schedule-sunday-header").classList.add("active");
+        document.getElementById("schedule-sunday").style.display = "block";
+      }
+      function onClickAddCalendar(element) {
+        element.classList.toggle("addthisevent-selected");
+        var dropdown = document.getElementById("atedrop1-drop");
+        if (dropdown.style.display === "none") {
+          dropdown.style.display = "block";
+        } else {
+          dropdown.style.display = "none";
+        }
+      }
+      function onClickMenu() {
+        document.getElementById("mobile-menu").classList.toggle("show");
+      }
+      function hideMobileMenu() {
+        document.getElementById("mobile-menu").classList.remove("show");
+      }
+      function onClickFaq(faq) {
+        var response = faq.parentNode.parentNode.getElementsByTagName("div")[0];
+        response.classList.toggle("show");
+      }
+    </script>
+  </head>
+  <body>
+    <div id="header">
+      <div>
+        <div class="navigation-wrapper centered-navigation">
+          <nav>
+            <div class="nav-mobile-menu" onclick="onClickMenu()">
+              <a class="mobile-menu">Menu</a>
             </div>
-            <div> </div>
-         </div>
+            <ul id="mobile-menu" class="centered-navigation-menu">
+              <li class="nav-link" onclick="hideMobileMenu()">
+                <a href="#overview">RSVP</a>
+              </li>
+              <li class="nav-link" onclick="hideMobileMenu()">
+                <a href="#schedule">SCHEDULE</a>
+              </li>
+              <li class="nav-link mobile-only" onclick="hideMobileMenu()">
+                <a href="#getting-there">GETTING THERE</a>
+              </li>
+              <li class="nav-link" onclick="hideMobileMenu()">
+                <a href="#lodging">LODGING</a>
+              </li>
+              <li class="nav-link mobile-only" onclick="hideMobileMenu()">
+                <a href="#wedding-party">WEDDING PARTY</a>
+              </li>
+              <li class="nav-link mobile-only" onclick="hideMobileMenu()">
+                <a href="#registry">REGISTRY</a>
+              </li>
+              <li class="nav-link" onclick="hideMobileMenu()">
+                <a href="#faq">FAQ</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div> </div>
       </div>
-      <section id="hero" class="pane">
-         <div class="pane-title" id="site-title-pane">
-            <h1>AURORE &amp; PEDRO</h1>
-            <p class="byline">are getting married</p>
-         </div>
-         <div class="scrollplz">
-            <p>SCROLL FOR MORE</p>
-            <svg id="scrollplz-arrow" height="50px" viewBox="0 0 5 27" stroke="none" fill="currentColor">
-               <rect x="2" y="0" width="1" height="23"></rect>
-               <path d="M0,22.244 L2.493,26.562 L4.986,22.244 L0,22.244 Z"></path>
-            </svg>
-         </div>
-      </section>
-      <!-------------->
-      <!-- OVERVIEW -->
-      <!-------------->
-      <section id="overview" class="pane">
-         <div class="pane-content">
-            <div class="pane-row">
-               <div class="who">
-                  <div class="title-section">
-                     <img id="who-icon" src="images/svg/tent.svg">
-                     <h2>WHO</h2>
-                     <span class="underline"></span>
-                  </div>
-                  <p class="larger">Our dearest friends &amp; family</p>
-                  <p class="sans-caps">FROM NEAR AND AFAR</p>
-                  <p><a class="link-button golden" target="_blank" href="https://withjoy.com/pedro-black-and-aurore-staes/rsvp">RSVP</a></p>
-               </div>
+    </div>
+    <section id="hero" class="pane">
+      <div class="pane-title" id="site-title-pane">
+        <h1>AURORE &amp; PEDRO</h1>
+        <p class="byline">are getting married</p>
+      </div>
+      <div class="scrollplz">
+        <p>SCROLL FOR MORE</p>
+        <svg id="scrollplz-arrow" height="50px" viewBox="0 0 5 27" stroke="none" fill="currentColor">
+          <rect x="2" y="0" width="1" height="23"></rect>
+          <path d="M0,22.244 L2.493,26.562 L4.986,22.244 L0,22.244 Z"></path>
+        </svg>
+      </div>
+    </section>
+    <!-------------->
+    <!-- OVERVIEW -->
+    <!-------------->
+    <section id="overview" class="pane">
+      <div class="pane-content">
+        <div class="pane-row">
+          <div class="who">
+            <div class="title-section">
+              <img id="who-icon" src="images/svg/tent.svg">
+              <h2>WHO</h2>
+              <span class="underline"></span>
             </div>
-            <div class="pane-row">
-               <div class="when">
-                  <div class="title-section">
-                     <img id="when-icon" src="images/svg/watch.svg">
-                     <h2>WHEN</h2>
-                     <span class="underline"></span>
-                  </div>
-                  <p class="larger">September 11, 2021</p>
-                  <p class="sans-caps">A SATURDAY</p>
+            <p class="larger">Our dearest friends &amp; family</p>
+            <p class="sans-caps">FROM NEAR AND AFAR</p>
+            <p><a class="link-button golden" target="_blank" href="https://withjoy.com/pedro-black-and-aurore-staes/rsvp">RSVP</a></p>
+          </div>
+        </div>
+        <div class="pane-row">
+          <div class="when">
+            <div class="title-section">
+              <img id="when-icon" src="images/svg/watch.svg">
+              <h2>WHEN</h2>
+              <span class="underline"></span>
+            </div>
+            <p class="larger">September 11, 2021</p>
+            <p class="sans-caps">A SATURDAY</p>
+            <p>
+              <a title="" class=" link-button addthisevent-drop" id="atedrop1" onclick="onClickAddCalendar(this)">Add to Calendar
+              <span id="atedrop1-drop" class="addthisevent_dropdown" style="left: 0px; top: 44px; display: none;">
+              <span class="ategoogle" onclick="location.href = 'https://www.addevent.com/event/dU5910787+google'">Google</span>
+              <span class="ateical" onclick="location.href = 'https://www.addevent.com/event/dU5910787+apple'">Apple</span>
+              <span class="ateoutlook" onclick="location.href = 'https://www.addevent.com/event/dU5910787+outlook'">Outlook</span>
+              <span class="atehotmail" onclick="location.href = 'https://www.addevent.com/event/dU5910787+office365'">Apple</span>
+              </span>
+              </a>
+            </p>
+          </div>
+          <div class="where">
+            <div class="title-section">
+              <img id="where-icon" src="images/svg/mountains.svg">
+              <h2>WHERE</h2>
+              <span class="underline"></span>
+            </div>
+            <p class="larger">Cintegabelle, France</p>
+            <p class="sans-caps">DOMAINE DU BEYSSAC</p>
+            <p><a class="link-button golden" target="_blank" href="https://goo.gl/maps/iQnkpZiPeASzseeFA">see on map</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-------------->
+    <!-- SCHEDULE -->
+    <!-------------->
+    <section id="schedule" class="pane">
+      <div class="pane-content">
+        <div class="pane-title">
+          <h2>SCHEDULE</h2>
+          <span class="underline"></span>
+        </div>
+        <div id="schedule-body">
+          <div>
+            <ul class="pane-row day-labels">
+              <li>
+                <a id="schedule-friday-header" class="day" onclick="onClickFriday()">FRIDAY</a>
+              </li>
+              <li>
+                <a id="schedule-saturday-header" class="day active" onclick="onClickSaturday()">SATURDAY</a>
+              </li>
+              <li>
+                <a id="schedule-sunday-header" class="day" onclick="onClickSunday()">SUNDAY</a>
+              </li>
+            </ul>
+            <div id="schedule-friday" style="display: none">
+              <div class="schedule-item">
+                <div class="left-side">
+                  <h4>Welcome Party</h4>
+                  <p class="attendees">Friends from abroad</p>
+                  <p class="dress">Dress: Casual</p>
+                </div>
+                <div class="right-side">
+                  <p>Starting at 21:00</p>
                   <p>
-                     <a title="" class=" link-button addthisevent-drop" id="atedrop1" onclick="onClickAddCalendar(this)">Add to Calendar
-                     <span id="atedrop1-drop" class="addthisevent_dropdown" style="left: 0px; top: 44px; display: none;">
-                     <span class="ategoogle" onclick="location.href = 'https://www.addevent.com/event/dU5910787+google'">Google</span>
-                     <span class="ateical" onclick="location.href = 'https://www.addevent.com/event/dU5910787+apple'">Apple</span>
-                     <span class="ateoutlook" onclick="location.href = 'https://www.addevent.com/event/dU5910787+outlook'">Outlook</span>
-                     <span class="atehotmail" onclick="location.href = 'https://www.addevent.com/event/dU5910787+office365'">Apple</span>
-                     </span>
-                     </a>
+                    <a href="https://goo.gl/maps/iQnkpZiPeASzseeFA" target="_blank">Domaine du Beyssac</a>
                   </p>
-               </div>
-               <div class="where">
-                  <div class="title-section">
-                     <img id="where-icon" src="images/svg/mountains.svg">
-                     <h2>WHERE</h2>
-                     <span class="underline"></span>
-                  </div>
-                  <p class="larger">Cintegabelle, France</p>
-                  <p class="sans-caps">DOMAINE DU BEYSSAC</p>
-                  <p><a class="link-button golden" target="_blank" href="https://goo.gl/maps/iQnkpZiPeASzseeFA">see on map</a></p>
-               </div>
+                </div>
+              </div>
             </div>
+            <div id="schedule-saturday" style="display: block">
+              <div class="schedule-item">
+                <div class="left-side">
+                  <h4>Ceremony</h4>
+                  <p class="attendees">All guests</p>
+                  <p class="dress">Dress: Elegant</p>
+                </div>
+                <div class="right-side">
+                  <p>14:30 to 15:30</p>
+                  <p>
+                    <a href="https://goo.gl/maps/iQnkpZiPeASzseeFA" target="_blank">Domaine du Beyssac</a>
+                  </p>
+                </div>
+              </div>
+              <div class="schedule-item">
+                <div class="left-side">
+                  <h4>Civil Wedding</h4>
+                  <p class="attendees">All guests</p>
+                  <p class="dress">Dress: Elegant</p>
+                </div>
+                <div class="right-side">
+                  <p>16:00 to 17:00</p>
+                  <p>
+                    <a href="https://goo.gl/maps/h8wsDEkwYKXFCdCs5" target="_blank">Mairie de Cintegabelle</a>
+                  </p>
+                </div>
+              </div>
+              <div class="schedule-item">
+                <div class="left-side">
+                  <h4>Wedding Reception</h4>
+                  <p class="attendees">All guests</p>
+                  <p class="dress">Dress: Elegant</p>
+                </div>
+                <div class="right-side">
+                  <p>Starting at 18:00</p>
+                  <p>
+                    <a href="https://goo.gl/maps/iQnkpZiPeASzseeFA" target="_blank">Domaine du Beyssac</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div id="schedule-sunday" style="display: none">
+              <div class="schedule-item">
+                <div class="left-side">
+                  <h4>Farewell Lunch</h4>
+                  <p class="attendees">All Interested</p>
+                  <p class="dress">Dress: Casual (swimsuit optional &#128521;)</p>
+                </div>
+                <div class="right-side">
+                  <p>13:00 to 17:00</p>
+                  <p>
+                    <a href="https://goo.gl/maps/iQnkpZiPeASzseeFA" target="_blank">Domaine du Beyssac</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="schedule-friday"></div>
+        <div class="schedule-saturday"></div>
+        <div class="schedule-sunday"></div>
+      </div>
+    </section>
+    <!------------------->
+    <!-- GETTING THERE -->
+    <!------------------->
+    <section id="getting-there" class="pane">
+      <div class="pane-content">
+        <div class="pane-title">
+          <h2>GETTING THERE</h2>
+          <span class="underline"></span>
+        </div>
+        <div class="pane-row">
+          <div class="transit-type">
+            <img id="airplane-svg" src="images/svg/plane.svg">
+            <h3>PLANE TO TOULOUSE</h3>
+            <p><b>From Zurich</b>: there is a direct flight from Basel with Easyjet.</p>
+            <p><b>From Lisbon</b>: there are direct flights with Tap or Ryanair</p>
+            <a href="https://www.google.com/flights/#search;t=AVL,GSP,CLT;d=2021-09-10;r=2021-09-13" class="link-button find-flights" target="_blank">Find Flights</a>
+          </div>
+          <div class="transit-type">
+            <img id="car-svg" src="images/svg/car.svg">
+            <h3>TO BEYSSAC</h3>
+            <p>We recommend that you to pair up with other invitees and rent a car at the airport. To help you </p>
+            <p>The other option requires taking a Tram --> Metro => Train to arrive to Cintegabelle and then a taxi to the </p>
+            <a href="https://goo.gl/maps/8g4meHbaKrkcJiQd7" class="link-button driving-directions" target="_blank">Driving Directions</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!------------->
+    <!-- LODGING -->
+    <!------------->
+    <section id="lodging" class="pane">
+      <div class="pane-content">
+        <div class="pane-title">
+          <h2>LODGING</h2>
+          <span class="underline"></span>
+        </div>
+        <div class="hotel-container">
+          <img class="round" src="https://s3.amazonaws.com/ameliaandsteveassets/holidayinn.jpg">
+          <h4>hotel</h4>
+          <p>Wblablabla.</p>
+          <div id="hotel-button">
+            <div><a href="#" class="link-button golden">Book</a></div>
+          </div>
+        </div>
+        <div class="airbnb">
+          <img class="round" src="https://s3.amazonaws.com/ameliaandsteveassets/airbnb.jpg">
+          <h4>airbnb</h4>
+          <p>Wblablabla.</p>
+          <a href="https://www.airbnb.com/s/Asheville--NC--United-States?checkin=9%2F18%2F2015&amp;checkout=09%2F20%2F2015" class="link-button golden">Search</a>
+        </div>
+      </div>
+    </section>
+    <!------------------->
+    <!-- WEDDING PARTY -->
+    <!------------------->
+    <section id="wedding-party" class="pane">
+      <div class="pane-content">
+        <div class="pane-title">
+          <h6>THE</h6>
+          <h2>WEDDING PARTY</h2>
+          <span class="underline"></span>
+        </div>
+        <div class="pane-row">
+          <p>Pedro and Aurore met in Zurich ..........</p>
+        </div>
+        <div class="us pane-row">
+          <div class="party-person">
+            <img src="images/wedding_party/aurore.jpg">
+            <h4 class="party-person-name">aurore staes</h4>
+            <h5 class="party-person-description">the bride</h5>
+          </div>
+          <div class="party-person">
+            <img src="images/wedding_party/pedro.jpg">
+            <h4 class="party-person-name">pedro<br> black</h4>
+            <h5 class="party-person-description">the groom</h5>
+          </div>
+        </div>
+        <div class="party-people">
+          <div class="party-person">
+            <img src="images/wedding_party/frederico.jpg">
+            <h4 class="party-person-name">frederico<br> catalão</h4>
+            <h5 class="party-person-description">best man</h5>
+          </div>
+          <div class="party-person">
+            <img src="images/wedding_party/marine.png">
+            <h4 class="party-person-name">marine<br> amouroux vincent</h4>
+            <h5 class="party-person-description">bridesmaid</h5>
+          </div>
+          <div class="party-person">
+            <img src="images/wedding_party/goncalo.jpg">
+            <h4 class="party-person-name">gonçalo<br> andrade e sousa</h4>
+            <h5 class="party-person-description">best man</h5>
+          </div>
+          <div class="party-person">
+            <img src="images/wedding_party/anais.jpg">
+            <h4 class="party-person-name">anaïs<br> pessato</h4>
+            <h5 class="party-person-description">bridesmaid</h5>
+          </div>
+          <div class="party-person">
+            <img src="images/wedding_party/muna.png">
+            <h4 class="party-person-name">segismundo<br> bragança</h4>
+            <h5 class="party-person-description">best man</h5>
+          </div>
+          <div class="party-person">
+            <img src="images/wedding_party/johannes.jpg">
+            <h4 class="party-person-name">johannes<br> wolter</h4>
+            <h5 class="party-person-description">best man</h5>
+          </div>
+          <div class="party-person">
+            <img src="images/wedding_party/camille.png">
+            <h4 class="party-person-name">camille<br> pavy</h4>
+            <h5 class="party-person-description">bridesmaid</h5>
+          </div>
+          <div class="party-person">
+            <img src="images/wedding_party/sassa.jpg">
+            <h4 class="party-person-name">salvador<br> líbano monteiro</h4>
+            <h5 class="party-person-description">best man</h5>
+          </div>
+          <div class="party-person">
+            <img src="images/wedding_party/luis.jpg">
+            <h4 class="party-person-name">luís<br> trocado</h4>
+            <h5 class="party-person-description">best man</h5>
+          </div>
+          <div class="party-person">
+            <img src="images/wedding_party/bastien.png">
+            <h4 class="party-person-name">bastien<br> staes</h4>
+            <h5 class="party-person-description">bridesman</h5>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!------------------->
+    <!-- WEDDING PARTY -->
+    <!------------------->
+    <section id="registry" class="pane flex">
+      <div class="pane-content">
+        <div class="pane-title">
+          <h2>REGISTRY</h2>
+          <span class="underline"></span>
+        </div>
+        <div class="registry-description">
+          <p>The best present you could possibly give us is the celebration of our marriage. However, if you’d like to spoil us, we’ve picked out a few items pique our interests.</p>
+          <a href="https://thkfl.com/" target="_blank" class="link-button golden">Registry on Thankful</a>
+        </div>
+      </div>
+    </section>
+    <!--     <section id="playlist" class="pane">
+      <div class="pane-content">
+         <div class="pane-title">
+            <h2>PLAYLIST</h2>
+            <span class="underline"></span>
          </div>
-      </section>
-      <!-------------->
-      <!-- SCHEDULE -->
-      <!-------------->
-      <section id="schedule" class="pane">
-         <div class="pane-content">
-            <div class="pane-title">
-               <h2>SCHEDULE</h2>
-               <span class="underline"></span>
-            </div>
-            <div id="schedule-body">
-               <div>
-                  <ul class="pane-row day-labels">
-                     <li>
-                        <a id="schedule-friday-header" class="day" onclick="onClickFriday()">FRIDAY</a>
-                     </li>
-                     <li>
-                        <a id="schedule-saturday-header" class="day active" onclick="onClickSaturday()">SATURDAY</a>
-                     </li>
-                     <li>
-                        <a id="schedule-sunday-header" class="day" onclick="onClickSunday()">SUNDAY</a>
-                     </li>
-                  </ul>
-                  <div id="schedule-friday" style="display: none">
-                     <div class="schedule-item">
-                        <div class="left-side">
-                           <h4>Welcome Party</h4>
-                           <p class="attendees">Friends from abroad</p>
-                           <p class="dress">Dress: Casual</p>
-                        </div>
-                        <div class="right-side">
-                           <p>Starting at 21:00</p>
-                           <p>
-                              <a href="https://goo.gl/maps/iQnkpZiPeASzseeFA" target="_blank">Domaine du Beyssac</a>
-                           </p>
-                        </div>
-                     </div>
-                  </div>
-                  <div id="schedule-saturday" style="display: block">
-                     <div class="schedule-item">
-                        <div class="left-side">
-                           <h4>Ceremony</h4>
-                           <p class="attendees">All guests</p>
-                           <p class="dress">Dress: Elegant</p>
-                        </div>
-                        <div class="right-side">
-                           <p>14:30 to 15:30</p>
-                           <p>
-                              <a href="https://goo.gl/maps/iQnkpZiPeASzseeFA" target="_blank">Domaine du Beyssac</a>
-                           </p>
-                        </div>
-                     </div>
-                     <div class="schedule-item">
-                        <div class="left-side">
-                           <h4>Civil Wedding</h4>
-                           <p class="attendees">All guests</p>
-                           <p class="dress">Dress: Elegant</p>
-                        </div>
-                        <div class="right-side">
-                           <p>16:00 to 17:00</p>
-                           <p>
-                              <a href="https://goo.gl/maps/h8wsDEkwYKXFCdCs5" target="_blank">Mairie de Cintegabelle</a>
-                           </p>
-                        </div>
-                     </div>
-                     <div class="schedule-item">
-                        <div class="left-side">
-                           <h4>Wedding Reception</h4>
-                           <p class="attendees">All guests</p>
-                           <p class="dress">Dress: Elegant</p>
-                        </div>
-                        <div class="right-side">
-                           <p>Starting at 18:00</p>
-                           <p>
-                              <a href="https://goo.gl/maps/iQnkpZiPeASzseeFA" target="_blank">Domaine du Beyssac</a>
-                           </p>
-                        </div>
-                     </div>
-                  </div>
-                  <div id="schedule-sunday" style="display: none">
-                     <div class="schedule-item">
-                        <div class="left-side">
-                           <h4>Farewell Lunch</h4>
-                           <p class="attendees">All Interested</p>
-                           <p class="dress">Dress: Casual (swimsuit optional &#128521;)</p>
-                        </div>
-                        <div class="right-side">
-                           <p>13:00 to 17:00</p>
-                           <p>
-                              <a href="https://goo.gl/maps/iQnkpZiPeASzseeFA" target="_blank">Domaine du Beyssac</a>
-                           </p>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="schedule-friday"></div>
-            <div class="schedule-saturday"></div>
-            <div class="schedule-sunday"></div>
+         <div class="pane-row">
+            <p>Add one song you would like to hear to this playlist.</p>
          </div>
-      </section>
-      <!------------------->
-      <!-- GETTING THERE -->
-      <!------------------->
-      <section id="getting-there" class="pane">
-         <div class="pane-content">
-            <div class="pane-title">
-               <h2>GETTING THERE</h2>
-               <span class="underline"></span>
+         <iframe src="https://open.spotify.com/embed/playlist/4FIIugAOX825CIOedv561G" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      </div>
+      </section> -->
+    <!------------>
+    <!-- PHOTOS -->
+    <!------------>
+    <section id="photos" class="pane">
+      <div class="pane-content">
+        <div class="pane-title">
+          <h2>PHOTOS OF US</h2>
+          <span class="underline"></span>
+        </div>
+        <div class="pane-row">
+          <p>Just in case you forgot what we look like.</p>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
+        <!-- <div class="pa-carousel-widget" style="width:100%; height:480px; display:none;" -->
+        <div class="pa-gallery-player-widget" style="width:100%; height:480px; display:none;"
+          data-link="https://photos.app.goo.gl/3ZbDvxPUdiHJ1NFE9"
+          data-title="A&amp;P"
+          data-description="50 new photos added to shared album"
+          data-delay="3">
+          <object data="https://lh3.googleusercontent.com/CNJi8VohksCeSUaKYCxJXWXS7563NL-Ut7SjKtoGePFSAZMWAaSPPcKi66OvZmXSFU8Hp1-sy6p1EJwhML-VEb8dhFHC4aR6Cne1YIRkLWb6U-a0OK97rhDhsewsoik279_88EXkBdw=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/lY8RMsIPnPL9AiU5WDzQ_mSA7BLOHjFHsW8xO4SoncNhL0IO1b05P_HWz046-Iv5SFH9lEYt2yUBO126tWSbNE8E-syw6RwIW0CCR75QVLIQiouL8naiXwDEBpLA4cCek7Q4eZ_MIfc=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/9Pk3vpwJZyvxM6oivxrXbajjdebC9yGtkJyCylM6vNmQsNXLV1Dpq9pzwEVlKLNzSzjv68x0h-p0bVt-6IRx5V_oS6TzMix_f1p16toR-kTUGQtg5CtfOjgMtSVyaFlXlmjBXNNtuUk=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/rqg-ZI3urqRhztkdJI1gIrRP3WTRmLmAtuQ2RNVAIVjQsQT4KltvujDC4ElxamZzAM0P8LiSm5YrlUNh6eE-RJIyHP-bgJ8zuen8bXpVbcs8QvUDLdh8VN_WvvPqfmkoaNzs2jTJJzQ=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/za2iSWdIY646ZfFABnZDrZgfWofvhx_IbnzicRk-_CNGiCVxXx4KP-YVpK3VU_oemm5MJ48_Zp0AXfHXrjtXGLjAyXVRzaFmoU9M7yax2K5sTMq9hsK3IQQWE_-Mofd6vCfefcMS1rM=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/RpFQDg8SPhhD9JuPkNMnC2zWdIemGZBqyS6uSgx9TcXciQbmAiyjtHyq8Khvqn8vt3QG0N5zePMmBbrUeBXptja1odaNauDXAY68WiBSF0PJh9MA7hqkGL9b6oopcGAdgQPzsv1Y_EQ=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/t92ksZtiQQIGu_ctu4DKmJfrKRy8bdgWs5vXt5w9Oy1VGwPKxcoQpkpkAtO4MeC6FurBlWNFjORpOC-qh94yZppau9IfMueyfb0wo04xAWjh5ZPbchugNRzd2KqD2SVDdEhLnFNK89E=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/krf44pZBkFDmjigLLyq_3U6wOz9Bvfc8uYE6abEttBtw5UlA9VocuT1kxsCl-mC91CWIXoQ1NZEbuuE-YDMYnTGY3mPKs9obKyQ6DyfT89yMQ_5ZgwldE-PDz_slYRAJdrp88a3hTjc=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/FMxyRQ-gJyAz3Pohzg5il9j-5fE7V5NVmG0mLTMy6ZQEUsW8B5L4V60i_JXOlGr3dI6VgTzEozSSt-mG_FaHQgoziQPy6GDiHa-Dx_Seq9YwRNgVE6iDi5JJV6MT0fRXpha4XQpuSlg=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/PloCBhGXlOcI8WMy0tVaKf_LjNRnh3yeptopf9k_zHgvr5r1XZdyfxPDFY72k8MM34jxqUbI8PDNBssatWyNP-hmGxsvsf8kUBmo32uZBiOln0wJPDz4KlXux54GdLZNDgzqzh3ElDs=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/sO1x_cy7bxHtPhwC5mjADdIRO88NGBuAtxLZnEeh-klYXrffvpetOGg9vPkVVGDvMwMMS5UdWH8PnuXQ0GI3AqevPhFkHDgMyjNS0nMapS9oNW_Jn-6mhCuCDLBOs1f0fbobkr5n2M8=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/e5j358cM0vsANo_sCC2njAN0es0omRO-QuC5lnjG2UXSgxOqnRuEV0zd9dxTTnSERm4YKDcLtTAM0Le4RJcIckhyyfQCt8k1PHvoFnArhCwoDIw0LTkEbSdPkfECgWmvdx3rz1L2ah0=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/mmug5-cUmcKe6eFsJytHOltY68RqNQyghQXHl8xlRoCFfcbkq0pLQ9gckhxphGqay7YZ381Bv3EGKKLOX-EK7jQ2Fcu54KHQ5eGdlCsnRzrs1gUBNn3zEnN7vvZBfU2tC6B1-7im0oA=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/ORLbJpVYqCFJQ_OG2QIr8yUKLwAbIDVCFBQjyXZ9iuDV390R5zm0my2Q8KENTtiMynXYp-NkZnuB-F4_j8nwbTRcnMICNp0Ykp5pq4y9xZH0qP5i4_r8MqUbLFTlcnJbQpiOiT6krNU=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/MCGYFvzOvsehZB-OPYpsnfXkMbvnI-loE3uH_EoscbjCTdKrXh2SUfGpZu7HwivEdjtDy3V3DYB4Aj3iMK0ASClAD8RrYrJEOam3cxIud7Ww16JkyNVnBM5E8yo0iFciEB_VzqufM9Q=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/ClRSeH8U7X-LmKZ1i-mmwnBEDUIlBlv459Iy-K5zBd0DEaEYZGxIZeSSOTdSMV5F5OXtOMvgtyexpzX91q1m5V2tpy8GOxciBrIDGnOxoDe1VCQ5XfUh1ZxGICSc8u-jK7-b2TaisKc=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/ovyrLe2yaMmgncTBTHUVZ-QtYg_OkznEkFwGM5RNrp2C_JkocJbNAB3d6HHQjkGBZMeQuTz7HaF1cuPFgOBGQmZkHXfFnfe6wr_cF8bYLxTsEryHOxO5MySKFLsWWVa0Yzoso5HuWi0=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/KQaC5pQo30R-nXIAmfq2GGYyJqZaQ386Yb_yVDD9CNqNp9a9Y6RP2qIMHTG0aBXnFgkhbzne28hUbpF1Bam7rgLdZnbbI7y_GDygy6rEdWZdvequtEudiCpDbsSHtYa_AVaxmhOnNTU=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/mmKxZpiATK4cOw9TC2aHdIZoCtLiDBeOehfPqWsu035s7gP8X2elvzVWo6fdYjQUYdV1I9JZ3iJ2wTFLviARt7BCDpTyAZcv-P2bGuEoF4QdWkJY9fY9mgt7zCwwugup2OAbu9M0gyc=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/J4o9JVAj_C2hgMmNRBoa9wysQoWzEAI1m2kZdWj98LM6Gwtiy6kn4LE5qz_uho1o-nua9BdneXicyxrnUDTaalUxh1sUv6LIewxS_F5J5kzGElWy_KVm6Fs2UeVQ-euuCKu_gOGvv8s=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/KYp6E9CwoP8fBApMFq6COoMhKiO35Ssk-PSrmBPYDtGys6tZnYP_hI94rWps7KoX863cintn8MLApaTRP3kawareVI6VkvDDN--2Zkc4QgLVRIDd2Ovl0UbIqw5XTogHLg5sj-StlJ4=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/V7osFfuit9UarPMJ1npPK9p2-YRR-I624tRdzH6kRdZcbEZ807agOrJPKizSitIPczDByPmyu9PaJLnU8ucyxq8TxV-pN-euZCqgJfEt7jkE69HnnBEVFwFpgdBLYuG4f56oyeUwCsM=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/CYlbgISTpsZ9ufxm3fx6DY1V2MIVfk1DST822_3KXYhjwOHu5dOsjgtGPARNMjxeS0EYBGFJXRJ9LcOgcidylxsuqbqBZoQ2eTeY9vO8N51em6-G87-M59v9KQF-E7VxQkEdFDOgrmE=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/1ZVytJBarzXDXEmzduTASECs8KPDVyw4EMiL1dwWTz8UBzJgdYcIwvluBqtQ_icwpl9bOxz5pr9JIUm2XGiWnChIkR6_akod-t1EXhDydQDVRdXHeDvJfAR97dlKvaBvC34B8-QbVIk=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/BcgWtxhO7qHrOphN3Gn8XpFrlgC90_vlMYxuPbzfYysYJNQI3gOWFKlrv85xELBGJ1gh4u6ze8cFtmw3MdYPyZT3pHWRm4IdVxUU11tCmeHx88XM4psmKcDFQesx2G78z3N2k8PwI8E=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/8YSh9gl9HA15vBF1TUvJPBobzEAeVcDZtGFDkcxeAew3fAgOmgOtDt6EibZ7M8pzITWUjsLuh5GA3cpOXM2TEIXdIP2sPNuUoPlIyFdtO1WQbkezINzIFaTIxJOM9bVwIJH-5GLLrQs=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/Ag2Y5NziQONjnrb6V0m_uObXBVAI5h5NKm2hvn25vc-ERTL3S5_U41K7TDDxHOvvGKrP9cCqiYBFOF4C3Tyb7TIA7Ga3l2tlAXwoqsDAaZfGjFJxSzJZshiNOkr3rG7YYVTVh_HwBTQ=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/JSslrXGuL1GB7PRymx4wx9bJD79Mz598ZYrwjFVAr9F09Hu7y_tFBELKsoiLfAU_Vy0Cr9aM_n7r2RlahhIg_idD3areQSEuMOrYMPy6gY0QOk7ia_0mi-ytfvpbikHPGx98Vg5U7Js=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/me-oP40Iw0lsWBHIU0vzrXcDqxqrrqgPuP8E1XkpMwQncrQ_8OWyy2hKYk5waRzJzBkJkq_iUARC-iToXAPIGG_Bvmq4_lwm8jPEyS0E-d6Kh-DMAxokexR1KD4gC4n1fCJXd9UC6GI=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/xt6Wks2oRBqKyvz6LeVe-U1N_R_aYbGGMP1aNeG222q3iKUibcPkP66SQs7jD7Br1QXo7Zi6z5-pvGhuimIvQzFsiW6kFDQ5-oVYxd0Hrk7CNkDz172cw-dSgPXBX30GJGz66a5v4yo=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/1thTUVTskg1T3hUbkVdS_duKdDcdzXjUADIbF0Oiel9Z7BFWrg7vKsEZCObjEG-mx0HdvOGF6nR0meYmWLytf4ObF3txpow78X7C6N5oBh_00Xx2fQ2cEu9iXU3yTr5yY_IhbafXvrg=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/nsGq_rzdYcxZvByY3Rn_rKC2GRXCLU51THRQu8cRzvGU2dwY7SQOWy1rDuYHb7Fz4IILai4_YDsaQfuKHye9NCgeRahf3X9g_6qeXIGorGap7ygcsR3Ky04lqOKtR0nSfueEAzFed48=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/t0lgY-mNwZGn8YiAz1Qh0w5kmtbqmp8QyJ9WLyG9MrUDNlaW0N419b6yM3qVo0_xqqoXxyay-neYd3E_fYOfzQnfqSRu-hacYaUDsWYz41zujHW7U2e1zAZl-1ZoUBMP1ycRLuAmOeY=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/YHmcmBNQMe-RzcWAYLjqaKFwmv67qsbkFtAaEyenMbFLnju3GHud_lwjOLBbdocQMH3amVSlYTeCLH5zKqmiBxt77O9oZG2sg-qo8pVYsE2UxKvleCvi2U5o0iNYIVFktIxYAYWUdNw=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/U5nRhunnL1kXeVNNYjW4OHlBsPfLTbyC1QdA5DDL-7JOlQVTdGeGLDwwR4U7J6D6GukLyDvHCMhUjPuda2PZZDdAacXSLXW5ylfTRRTXR86FDenwFSL61wE6rfyJ3mY8lcJmQOD5S7Q=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/QLpuIYCWw1Ubo6PRC28voaekdaqqRgNvP8-HQFkeRMy5cBAKdZuJRabfNkRgGCtqJC7kuiXrDKM0ud17nk3AwZEEe154oy96oLh8EwFkcfne6dY5wmVbew3cDzsOWiOay60HmAuoM90=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/rUPv4lyFvGig2CFVjgyP99n5PaWb0rfK-RNzNrDHb-HfAXplMyR55hQYiFyAllzD7JvF3hETfQz0eMjKEpTJhvpmRcuYjwhqa0DAXBpDWCsuXc9B8Kx3Ju_vC5f7l_1Rk8pWftmAUYM=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/RMTqzFVCS1kl298o_4ExYCksiuf3zcGCTcxgtn3CEV3eevIdAo5ohWPto92FUd74QNplS1okM9swj-2lpYlXqAITvjkGObsqLXHQwHSIZ8BvIhdCcFoMCMGSJ2QJ2KFyni5vzxTRwVk=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/ti-WlXhWB4I0qHVgyAqJc19EX3DtLz_XoX5W-TecfbhU9eQ43b1XLx7H0lhhi1eM5tt9Jrlsw_TeiU1KKrTEytz2x3goHd5PGlwvkZo9kKoxMb69v9W9465aOBAQKNxD9xRN4Xojbfw=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/YxiiMzWRCf6_NqC2cCTTvoOLH-3gEUcUOXQxEdQsr9qU4DI17tgFI_-20lvtrhklU8g3nzX_c7wbAdkfxEMoQ5xWDfV7aGSdVQIZ3TE83JrviLa4k8qLP6KuWARJsTe2vXzX4CbgH8I=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/rtfakUeC5u23TvRvr5FHZN0jPk9nQtBqawNT6zFx_-6t2jX4hBHgkTf8eA6Y2Jzoaj96MDJAK-C33FL317aMYNUwQNC_mFxJZGXBWL2sdlc9fulINmyeOK4a-2VZ7F56z_O379r3yJ0=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/hN0K9v6b0Ejp3eLotVqmM_D3Aci2wHbO7Bkdtq88xEEZ_pqYj2AcpsnezeRDgn4vYpDWOxtaIf4aSW1hGK-gAyrnQM21zFlMxJdbi0svr-CQAsag92AfhODMPESZrVAmEGkaj_FPeG8=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/4bAF-0gxusdReuv9lcC2H2rMJnTKO9sQWgneLJrghTG8gdkX-hzAI-_nW1lvwax_1JmPdMlWuw9LWBhLsVVNjuCwJNKGltWFDbPhBfKbXaH1JLroDx-2aIVx8Tr9W04YMAgW4uxntDE=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/ge8ven8KJTAEr-1DZSWPBhTYcbkyhNDqs65kXTpja-oCGsdVDB7qZYjLiE8T1uvZxBsyf2S6vbZ31F9jmAq-nPDoRRx6MIFOkLUeMlPZ0EiBXOwhCcL6idI7v_HJRqc3GSqSPJ1Ys1Q=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/tLs4beLJMEFalGs9ENS8AbcOdThq11a9OU1bBp_dRngfLyo_P3KRFAxBolUTobIRvNxfOEXCC7q_TQ5wqcX37pXJH9LrWxerVx_h392IIftLYQ-yPXNKvVXwGGtiGpqbvau-jvLKgM0=w1920-h1080"></object>
+          <object data="https://lh3.googleusercontent.com/8FagmnSxU6fQQKPqHlVMduvZnWmtRYVOl7IPf0gpAafwHFocui12U7mPvgLaqLq-6Y2AKcMDU7SIdJKtN2KnexqdA4eP0GeHW6TTtQWDCdGwg8te6XxB-EfXRG_Vl328SOI6Tfo2Hpk=w1920-h1080"></object>
+        </div>
+      </div>
+    </section>
+    <!--------->
+    <!-- FAQ -->
+    <!--------->
+    <section id="faq" class="pane">
+      <div class="pane-content">
+        <div class="pane-title">
+          <h2>FAQ</h2>
+          <span class="underline"></span>
+        </div>
+        <div class="faq-section">
+          <div class="faq">
+            <h5><a onclick="onClickFaq(this)">When should I arrive and how long should I stay?</a></h5>
+            <div class="faq-answer">
+              <p>Most of the events kick off on Friday night and end on Sunday afternoon, but please enjoy the area for as long as you're able.</p>
             </div>
-            <div class="pane-row">
-               <div class="transit-type">
-                  <img id="airplane-svg" src="images/svg/plane.svg">
-                  <h3>PLANE TO TOULOUSE</h3>
-				  <p><b>From Zurich</b>: there is a direct flight from Basel with Easyjet.</p>
-				  <p><b>From Lisbon</b>: there are direct flights with Tap or Ryanair</p>
-                  <a href="https://www.google.com/flights/#search;t=AVL,GSP,CLT;d=2021-09-10;r=2021-09-13" class="link-button find-flights" target="_blank">Find Flights</a>
-               </div>
-               <div class="transit-type">
-                  <img id="car-svg" src="images/svg/car.svg">
-                  <h3>TO BEYSSAC</h3>
-                  <p>We recommend that you to pair up with other invitees and rent a car at the airport. To help you </p>
-                  <p>The other option requires taking a Tram --> Metro => Train to arrive to Cintegabelle and then a taxi to the </p>
-                  <a href="https://goo.gl/maps/8g4meHbaKrkcJiQd7" class="link-button driving-directions" target="_blank">Driving Directions</a>
-               </div>
+          </div>
+          <div class="faq">
+            <h5><a onclick="onClickFaq(this)">Any tips on what should I wear? </a></h5>
+            <div class="faq-answer">
+              <p>Weather permitting, the ceremony and parts of the reception will be outdoors, so shoes that can traverse gravel and grass would make your life easier.</p>
+              <p>Dress code: Elegant.</p>
             </div>
-         </div>
-      </section>
-      <!------------->
-      <!-- LODGING -->
-      <!------------->
-      <section id="lodging" class="pane">
-         <div class="pane-content">
-            <div class="pane-title">
-               <h2>LODGING</h2>
-               <span class="underline"></span>
+          </div>
+          <div class="faq">
+            <h5><a onclick="onClickFaq(this)">Should I pack anything special?</a></h5>
+            <div class="faq-answer">
+              <p>The wedding venue has a swimming pool so, if the weather is right and you would like to take a swim on Sunday, pack a bathing suit.</p>
             </div>
-            <div class="hotel-container">
-               <img class="round" src="https://s3.amazonaws.com/ameliaandsteveassets/holidayinn.jpg">
-               <h4>hotel</h4>
-               <p>Wblablabla.</p>
-               <div id="hotel-button">
-                  <div><a href="#" class="link-button golden">Book</a></div>
-               </div>
+          </div>
+          <div class="faq">
+            <h5><a onclick="onClickFaq(this)">What is the weather like in the region this time of year?</a></h5>
+            <div class="faq-answer">
+              <p>In the beginning of September, Cintegabelle averages a high of 24°C and a low of 14°C. For a more detailed view 
+                <a href="https://fr.weatherspark.com/m/46191/9/M%C3%A9t%C3%A9o-habituelle-en-septembre-%C3%A0-Cintegabelle-France#Sections-Temperature">check this website</a>
+              </p>
             </div>
-            <div class="airbnb">
-               <img class="round" src="https://s3.amazonaws.com/ameliaandsteveassets/airbnb.jpg">
-               <h4>airbnb</h4>
-               <p>Wblablabla.</p>
-               <a href="https://www.airbnb.com/s/Asheville--NC--United-States?checkin=9%2F18%2F2015&amp;checkout=09%2F20%2F2015" class="link-button golden">Search</a>
+          </div>
+          <div class="faq">
+            <h5><a onclick="onClickFaq(this)">Will you be accommodating any diet restrictions?</a></h5>
+            <div class="faq-answer">
+              <p>We will accommodatingmodate vegetarian meals so please let us know in the RSVP if that is your preferred choice. If you have any other dietary concerns, feel free to let us know so we can explore options for you!</p>
             </div>
-         </div>
-      </section>
-
-      <!------------------->
-      <!-- WEDDING PARTY -->
-      <!------------------->
-
-      <section id="wedding-party" class="pane">
-         <div class="pane-content">
-            <div class="pane-title">
-               <h6>THE</h6>
-               <h2>WEDDING PARTY</h2>
-               <span class="underline"></span>
-            </div>
-            <div class="pane-row">
-               <p>Pedro and Aurore met in Zurich ..........</p>
-            </div>
-            <div class="us pane-row">
-               <div class="party-person">
-                  <img src="images/wedding_party/aurore.jpg">
-                  <h4 class="party-person-name">aurore staes</h4>
-                  <h5 class="party-person-description">the bride</h5>
-               </div>
-               <div class="party-person">
-                  <img src="images/wedding_party/pedro.jpg">
-                  <h4 class="party-person-name">pedro<br> black</h4>
-                  <h5 class="party-person-description">the groom</h5>
-               </div>
-            </div>
-            <div class="party-people">
-               <div class="party-person">
-                  <img src="images/wedding_party/frederico.jpg">
-                  <h4 class="party-person-name">frederico<br> catalão</h4>
-                  <h5 class="party-person-description">best man</h5>
-               </div>
-               <div class="party-person">
-                  <img src="images/wedding_party/marine.png">
-                  <h4 class="party-person-name">marine<br> amouroux vincent</h4>
-                  <h5 class="party-person-description">bridesmaid</h5>
-               </div>
-               <div class="party-person">
-                  <img src="images/wedding_party/goncalo.jpg">
-                  <h4 class="party-person-name">gonçalo<br> andrade e sousa</h4>
-                  <h5 class="party-person-description">best man</h5>
-               </div>
-               <div class="party-person">
-                  <img src="images/wedding_party/anais.jpg">
-                  <h4 class="party-person-name">anaïs<br> pessato</h4>
-                  <h5 class="party-person-description">bridesmaid</h5>
-               </div>
-               <div class="party-person">
-                  <img src="images/wedding_party/muna.png">
-                  <h4 class="party-person-name">segismundo<br> bragança</h4>
-                  <h5 class="party-person-description">best man</h5>
-               </div>
-               <div class="party-person">
-                  <img src="images/wedding_party/johannes.jpg">
-                  <h4 class="party-person-name">johannes<br> wolter</h4>
-                  <h5 class="party-person-description">best man</h5>
-               </div>
-               <div class="party-person">
-                  <img src="images/wedding_party/camille.png">
-                  <h4 class="party-person-name">camille<br> pavy</h4>
-                  <h5 class="party-person-description">bridesmaid</h5>
-               </div>
-               <div class="party-person">
-                  <img src="images/wedding_party/sassa.jpg">
-                  <h4 class="party-person-name">salvador<br> líbano monteiro</h4>
-                  <h5 class="party-person-description">best man</h5>
-               </div>
-               <div class="party-person">
-                  <img src="images/wedding_party/luis.jpg">
-                  <h4 class="party-person-name">luís<br> trocado</h4>
-                  <h5 class="party-person-description">best man</h5>
-               </div>
-               <div class="party-person">
-                  <img src="images/wedding_party/bastien.png">
-                  <h4 class="party-person-name">bastien<br> staes</h4>
-                  <h5 class="party-person-description">bridesman</h5>
-               </div>
-            </div>
-         </div>
-      </section>
-
-
-      <!------------------->
-      <!-- WEDDING PARTY -->
-      <!------------------->
-
-      <section id="registry" class="pane flex">
-         <div class="pane-content">
-            <div class="pane-title">
-               <h2>REGISTRY</h2>
-               <span class="underline"></span>
-            </div>
-            <div class="registry-description">
-               <p>The best present you could possibly give us is the celebration of our marriage. However, if you’d like to spoil us, we’ve picked out a few items pique our interests.</p>
-               <a href="https://thkfl.com/" target="_blank" class="link-button golden">Registry on Thankful</a>
-            </div>
-         </div>
-      </section>
-      <!--     <section id="playlist" class="pane">
-         <div class="pane-content">
-            <div class="pane-title">
-               <h2>PLAYLIST</h2>
-               <span class="underline"></span>
-            </div>
-            <div class="pane-row">
-               <p>Add one song you would like to hear to this playlist.</p>
-            </div>
-            <iframe src="https://open.spotify.com/embed/playlist/4FIIugAOX825CIOedv561G" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-         </div>
-         </section> -->
-
-
-      <!------------>
-      <!-- PHOTOS -->
-      <!------------>
-
-      <section id="photos" class="pane">
-         <div class="pane-content">
-            <div class="pane-title">
-               <h2>PHOTOS OF US</h2>
-               <span class="underline"></span>
-            </div>
-            <div class="pane-row">
-               <p>Just in case you forgot what we look like.</p>
-            </div>
-            <script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
-            <!-- <div class="pa-carousel-widget" style="width:100%; height:480px; display:none;" -->
-            <div class="pa-gallery-player-widget" style="width:100%; height:480px; display:none;"
-               data-link="https://photos.app.goo.gl/3ZbDvxPUdiHJ1NFE9"
-               data-title="A&amp;P"
-               data-description="50 new photos added to shared album"
-               data-delay="3">
-               <object data="https://lh3.googleusercontent.com/CNJi8VohksCeSUaKYCxJXWXS7563NL-Ut7SjKtoGePFSAZMWAaSPPcKi66OvZmXSFU8Hp1-sy6p1EJwhML-VEb8dhFHC4aR6Cne1YIRkLWb6U-a0OK97rhDhsewsoik279_88EXkBdw=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/lY8RMsIPnPL9AiU5WDzQ_mSA7BLOHjFHsW8xO4SoncNhL0IO1b05P_HWz046-Iv5SFH9lEYt2yUBO126tWSbNE8E-syw6RwIW0CCR75QVLIQiouL8naiXwDEBpLA4cCek7Q4eZ_MIfc=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/9Pk3vpwJZyvxM6oivxrXbajjdebC9yGtkJyCylM6vNmQsNXLV1Dpq9pzwEVlKLNzSzjv68x0h-p0bVt-6IRx5V_oS6TzMix_f1p16toR-kTUGQtg5CtfOjgMtSVyaFlXlmjBXNNtuUk=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/rqg-ZI3urqRhztkdJI1gIrRP3WTRmLmAtuQ2RNVAIVjQsQT4KltvujDC4ElxamZzAM0P8LiSm5YrlUNh6eE-RJIyHP-bgJ8zuen8bXpVbcs8QvUDLdh8VN_WvvPqfmkoaNzs2jTJJzQ=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/za2iSWdIY646ZfFABnZDrZgfWofvhx_IbnzicRk-_CNGiCVxXx4KP-YVpK3VU_oemm5MJ48_Zp0AXfHXrjtXGLjAyXVRzaFmoU9M7yax2K5sTMq9hsK3IQQWE_-Mofd6vCfefcMS1rM=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/RpFQDg8SPhhD9JuPkNMnC2zWdIemGZBqyS6uSgx9TcXciQbmAiyjtHyq8Khvqn8vt3QG0N5zePMmBbrUeBXptja1odaNauDXAY68WiBSF0PJh9MA7hqkGL9b6oopcGAdgQPzsv1Y_EQ=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/t92ksZtiQQIGu_ctu4DKmJfrKRy8bdgWs5vXt5w9Oy1VGwPKxcoQpkpkAtO4MeC6FurBlWNFjORpOC-qh94yZppau9IfMueyfb0wo04xAWjh5ZPbchugNRzd2KqD2SVDdEhLnFNK89E=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/krf44pZBkFDmjigLLyq_3U6wOz9Bvfc8uYE6abEttBtw5UlA9VocuT1kxsCl-mC91CWIXoQ1NZEbuuE-YDMYnTGY3mPKs9obKyQ6DyfT89yMQ_5ZgwldE-PDz_slYRAJdrp88a3hTjc=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/FMxyRQ-gJyAz3Pohzg5il9j-5fE7V5NVmG0mLTMy6ZQEUsW8B5L4V60i_JXOlGr3dI6VgTzEozSSt-mG_FaHQgoziQPy6GDiHa-Dx_Seq9YwRNgVE6iDi5JJV6MT0fRXpha4XQpuSlg=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/PloCBhGXlOcI8WMy0tVaKf_LjNRnh3yeptopf9k_zHgvr5r1XZdyfxPDFY72k8MM34jxqUbI8PDNBssatWyNP-hmGxsvsf8kUBmo32uZBiOln0wJPDz4KlXux54GdLZNDgzqzh3ElDs=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/sO1x_cy7bxHtPhwC5mjADdIRO88NGBuAtxLZnEeh-klYXrffvpetOGg9vPkVVGDvMwMMS5UdWH8PnuXQ0GI3AqevPhFkHDgMyjNS0nMapS9oNW_Jn-6mhCuCDLBOs1f0fbobkr5n2M8=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/e5j358cM0vsANo_sCC2njAN0es0omRO-QuC5lnjG2UXSgxOqnRuEV0zd9dxTTnSERm4YKDcLtTAM0Le4RJcIckhyyfQCt8k1PHvoFnArhCwoDIw0LTkEbSdPkfECgWmvdx3rz1L2ah0=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/mmug5-cUmcKe6eFsJytHOltY68RqNQyghQXHl8xlRoCFfcbkq0pLQ9gckhxphGqay7YZ381Bv3EGKKLOX-EK7jQ2Fcu54KHQ5eGdlCsnRzrs1gUBNn3zEnN7vvZBfU2tC6B1-7im0oA=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/ORLbJpVYqCFJQ_OG2QIr8yUKLwAbIDVCFBQjyXZ9iuDV390R5zm0my2Q8KENTtiMynXYp-NkZnuB-F4_j8nwbTRcnMICNp0Ykp5pq4y9xZH0qP5i4_r8MqUbLFTlcnJbQpiOiT6krNU=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/MCGYFvzOvsehZB-OPYpsnfXkMbvnI-loE3uH_EoscbjCTdKrXh2SUfGpZu7HwivEdjtDy3V3DYB4Aj3iMK0ASClAD8RrYrJEOam3cxIud7Ww16JkyNVnBM5E8yo0iFciEB_VzqufM9Q=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/ClRSeH8U7X-LmKZ1i-mmwnBEDUIlBlv459Iy-K5zBd0DEaEYZGxIZeSSOTdSMV5F5OXtOMvgtyexpzX91q1m5V2tpy8GOxciBrIDGnOxoDe1VCQ5XfUh1ZxGICSc8u-jK7-b2TaisKc=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/ovyrLe2yaMmgncTBTHUVZ-QtYg_OkznEkFwGM5RNrp2C_JkocJbNAB3d6HHQjkGBZMeQuTz7HaF1cuPFgOBGQmZkHXfFnfe6wr_cF8bYLxTsEryHOxO5MySKFLsWWVa0Yzoso5HuWi0=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/KQaC5pQo30R-nXIAmfq2GGYyJqZaQ386Yb_yVDD9CNqNp9a9Y6RP2qIMHTG0aBXnFgkhbzne28hUbpF1Bam7rgLdZnbbI7y_GDygy6rEdWZdvequtEudiCpDbsSHtYa_AVaxmhOnNTU=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/mmKxZpiATK4cOw9TC2aHdIZoCtLiDBeOehfPqWsu035s7gP8X2elvzVWo6fdYjQUYdV1I9JZ3iJ2wTFLviARt7BCDpTyAZcv-P2bGuEoF4QdWkJY9fY9mgt7zCwwugup2OAbu9M0gyc=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/J4o9JVAj_C2hgMmNRBoa9wysQoWzEAI1m2kZdWj98LM6Gwtiy6kn4LE5qz_uho1o-nua9BdneXicyxrnUDTaalUxh1sUv6LIewxS_F5J5kzGElWy_KVm6Fs2UeVQ-euuCKu_gOGvv8s=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/KYp6E9CwoP8fBApMFq6COoMhKiO35Ssk-PSrmBPYDtGys6tZnYP_hI94rWps7KoX863cintn8MLApaTRP3kawareVI6VkvDDN--2Zkc4QgLVRIDd2Ovl0UbIqw5XTogHLg5sj-StlJ4=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/V7osFfuit9UarPMJ1npPK9p2-YRR-I624tRdzH6kRdZcbEZ807agOrJPKizSitIPczDByPmyu9PaJLnU8ucyxq8TxV-pN-euZCqgJfEt7jkE69HnnBEVFwFpgdBLYuG4f56oyeUwCsM=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/CYlbgISTpsZ9ufxm3fx6DY1V2MIVfk1DST822_3KXYhjwOHu5dOsjgtGPARNMjxeS0EYBGFJXRJ9LcOgcidylxsuqbqBZoQ2eTeY9vO8N51em6-G87-M59v9KQF-E7VxQkEdFDOgrmE=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/1ZVytJBarzXDXEmzduTASECs8KPDVyw4EMiL1dwWTz8UBzJgdYcIwvluBqtQ_icwpl9bOxz5pr9JIUm2XGiWnChIkR6_akod-t1EXhDydQDVRdXHeDvJfAR97dlKvaBvC34B8-QbVIk=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/BcgWtxhO7qHrOphN3Gn8XpFrlgC90_vlMYxuPbzfYysYJNQI3gOWFKlrv85xELBGJ1gh4u6ze8cFtmw3MdYPyZT3pHWRm4IdVxUU11tCmeHx88XM4psmKcDFQesx2G78z3N2k8PwI8E=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/8YSh9gl9HA15vBF1TUvJPBobzEAeVcDZtGFDkcxeAew3fAgOmgOtDt6EibZ7M8pzITWUjsLuh5GA3cpOXM2TEIXdIP2sPNuUoPlIyFdtO1WQbkezINzIFaTIxJOM9bVwIJH-5GLLrQs=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/Ag2Y5NziQONjnrb6V0m_uObXBVAI5h5NKm2hvn25vc-ERTL3S5_U41K7TDDxHOvvGKrP9cCqiYBFOF4C3Tyb7TIA7Ga3l2tlAXwoqsDAaZfGjFJxSzJZshiNOkr3rG7YYVTVh_HwBTQ=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/JSslrXGuL1GB7PRymx4wx9bJD79Mz598ZYrwjFVAr9F09Hu7y_tFBELKsoiLfAU_Vy0Cr9aM_n7r2RlahhIg_idD3areQSEuMOrYMPy6gY0QOk7ia_0mi-ytfvpbikHPGx98Vg5U7Js=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/me-oP40Iw0lsWBHIU0vzrXcDqxqrrqgPuP8E1XkpMwQncrQ_8OWyy2hKYk5waRzJzBkJkq_iUARC-iToXAPIGG_Bvmq4_lwm8jPEyS0E-d6Kh-DMAxokexR1KD4gC4n1fCJXd9UC6GI=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/xt6Wks2oRBqKyvz6LeVe-U1N_R_aYbGGMP1aNeG222q3iKUibcPkP66SQs7jD7Br1QXo7Zi6z5-pvGhuimIvQzFsiW6kFDQ5-oVYxd0Hrk7CNkDz172cw-dSgPXBX30GJGz66a5v4yo=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/1thTUVTskg1T3hUbkVdS_duKdDcdzXjUADIbF0Oiel9Z7BFWrg7vKsEZCObjEG-mx0HdvOGF6nR0meYmWLytf4ObF3txpow78X7C6N5oBh_00Xx2fQ2cEu9iXU3yTr5yY_IhbafXvrg=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/nsGq_rzdYcxZvByY3Rn_rKC2GRXCLU51THRQu8cRzvGU2dwY7SQOWy1rDuYHb7Fz4IILai4_YDsaQfuKHye9NCgeRahf3X9g_6qeXIGorGap7ygcsR3Ky04lqOKtR0nSfueEAzFed48=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/t0lgY-mNwZGn8YiAz1Qh0w5kmtbqmp8QyJ9WLyG9MrUDNlaW0N419b6yM3qVo0_xqqoXxyay-neYd3E_fYOfzQnfqSRu-hacYaUDsWYz41zujHW7U2e1zAZl-1ZoUBMP1ycRLuAmOeY=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/YHmcmBNQMe-RzcWAYLjqaKFwmv67qsbkFtAaEyenMbFLnju3GHud_lwjOLBbdocQMH3amVSlYTeCLH5zKqmiBxt77O9oZG2sg-qo8pVYsE2UxKvleCvi2U5o0iNYIVFktIxYAYWUdNw=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/U5nRhunnL1kXeVNNYjW4OHlBsPfLTbyC1QdA5DDL-7JOlQVTdGeGLDwwR4U7J6D6GukLyDvHCMhUjPuda2PZZDdAacXSLXW5ylfTRRTXR86FDenwFSL61wE6rfyJ3mY8lcJmQOD5S7Q=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/QLpuIYCWw1Ubo6PRC28voaekdaqqRgNvP8-HQFkeRMy5cBAKdZuJRabfNkRgGCtqJC7kuiXrDKM0ud17nk3AwZEEe154oy96oLh8EwFkcfne6dY5wmVbew3cDzsOWiOay60HmAuoM90=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/rUPv4lyFvGig2CFVjgyP99n5PaWb0rfK-RNzNrDHb-HfAXplMyR55hQYiFyAllzD7JvF3hETfQz0eMjKEpTJhvpmRcuYjwhqa0DAXBpDWCsuXc9B8Kx3Ju_vC5f7l_1Rk8pWftmAUYM=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/RMTqzFVCS1kl298o_4ExYCksiuf3zcGCTcxgtn3CEV3eevIdAo5ohWPto92FUd74QNplS1okM9swj-2lpYlXqAITvjkGObsqLXHQwHSIZ8BvIhdCcFoMCMGSJ2QJ2KFyni5vzxTRwVk=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/ti-WlXhWB4I0qHVgyAqJc19EX3DtLz_XoX5W-TecfbhU9eQ43b1XLx7H0lhhi1eM5tt9Jrlsw_TeiU1KKrTEytz2x3goHd5PGlwvkZo9kKoxMb69v9W9465aOBAQKNxD9xRN4Xojbfw=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/YxiiMzWRCf6_NqC2cCTTvoOLH-3gEUcUOXQxEdQsr9qU4DI17tgFI_-20lvtrhklU8g3nzX_c7wbAdkfxEMoQ5xWDfV7aGSdVQIZ3TE83JrviLa4k8qLP6KuWARJsTe2vXzX4CbgH8I=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/rtfakUeC5u23TvRvr5FHZN0jPk9nQtBqawNT6zFx_-6t2jX4hBHgkTf8eA6Y2Jzoaj96MDJAK-C33FL317aMYNUwQNC_mFxJZGXBWL2sdlc9fulINmyeOK4a-2VZ7F56z_O379r3yJ0=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/hN0K9v6b0Ejp3eLotVqmM_D3Aci2wHbO7Bkdtq88xEEZ_pqYj2AcpsnezeRDgn4vYpDWOxtaIf4aSW1hGK-gAyrnQM21zFlMxJdbi0svr-CQAsag92AfhODMPESZrVAmEGkaj_FPeG8=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/4bAF-0gxusdReuv9lcC2H2rMJnTKO9sQWgneLJrghTG8gdkX-hzAI-_nW1lvwax_1JmPdMlWuw9LWBhLsVVNjuCwJNKGltWFDbPhBfKbXaH1JLroDx-2aIVx8Tr9W04YMAgW4uxntDE=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/ge8ven8KJTAEr-1DZSWPBhTYcbkyhNDqs65kXTpja-oCGsdVDB7qZYjLiE8T1uvZxBsyf2S6vbZ31F9jmAq-nPDoRRx6MIFOkLUeMlPZ0EiBXOwhCcL6idI7v_HJRqc3GSqSPJ1Ys1Q=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/tLs4beLJMEFalGs9ENS8AbcOdThq11a9OU1bBp_dRngfLyo_P3KRFAxBolUTobIRvNxfOEXCC7q_TQ5wqcX37pXJH9LrWxerVx_h392IIftLYQ-yPXNKvVXwGGtiGpqbvau-jvLKgM0=w1920-h1080"></object>
-               <object data="https://lh3.googleusercontent.com/8FagmnSxU6fQQKPqHlVMduvZnWmtRYVOl7IPf0gpAafwHFocui12U7mPvgLaqLq-6Y2AKcMDU7SIdJKtN2KnexqdA4eP0GeHW6TTtQWDCdGwg8te6XxB-EfXRG_Vl328SOI6Tfo2Hpk=w1920-h1080"></object>
-            </div>
-         </div>
-      </section>
-
-      <!--------->
-      <!-- FAQ -->
-      <!--------->
-
-      <section id="faq" class="pane">
-         <div class="pane-content">
-            <div class="pane-title">
-               <h2>FAQ</h2>
-               <span class="underline"></span>
-            </div>
-            <div class="faq-section">
-               <div class="faq">
-                  <h5><a onclick="onClickFaq(this)">When should I arrive and how long should I stay?</a></h5>
-                  <div class="faq-answer">
-                     <p>Most of the events kick off on Friday night and end on Sunday afternoon, but please enjoy the area for as long as you're able.</p>
-                  </div>
-               </div>
-               <div class="faq">
-                  <h5><a onclick="onClickFaq(this)">Any tips on what should I wear? </a></h5>
-                  <div class="faq-answer">
-                     <p>Weather permitting, the ceremony and parts of the reception will be outdoors, so shoes that can traverse gravel and grass would make your life easier.</p>
-                     <p>Dress code: Elegant.</p>
-                  </div>
-               </div>
-               <div class="faq">
-                  <h5><a onclick="onClickFaq(this)">Should I pack anything special?</a></h5>
-                  <div class="faq-answer">
-                     <p>The wedding venue has a swimming pool so, if the weather is right and you would like to take a swim on Sunday, pack a bathing suit.</p>
-                  </div>
-               </div>
-               <div class="faq">
-                  <h5><a onclick="onClickFaq(this)">What is the weather like in the region this time of year?</a></h5>
-                  <div class="faq-answer">
-                     <p>In the beginning of September, Cintegabelle averages a high of 24°C and a low of 14°C. For a more detailed view 
-						 <a href="https://fr.weatherspark.com/m/46191/9/M%C3%A9t%C3%A9o-habituelle-en-septembre-%C3%A0-Cintegabelle-France#Sections-Temperature">check this website</a>
-					 </p>
-                  </div>
-               </div>
-               <div class="faq">
-                  <h5><a onclick="onClickFaq(this)">Will you be accommodating any diet restrictions?</a></h5>
-                  <div class="faq-answer">
-                     <p>We will accommodatingmodate vegetarian meals so please let us know in the RSVP if that is your preferred choice. If you have any other dietary concerns, feel free to let us know so we can explore options for you!</p>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-   </body>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
