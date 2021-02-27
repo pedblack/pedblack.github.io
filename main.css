@@ -882,7 +882,7 @@ input[type=submit].link-button.golden:hover {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	min-height: 50vh;
+	min-height: 100vh;
 	position: relative;
 	width: 100%;
 	padding: 6rem 1.5em;
@@ -1747,7 +1747,7 @@ input[type=submit].link-button.golden:hover {
 	background-image: url("images/flowers.jpg");
 	-webkit-background-size: cover;
 	background-size: cover;
-	min-height: 90vh
+	min-height: 100vh
 }
 
 #registry .pane-content {
