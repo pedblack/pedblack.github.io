@@ -5,12 +5,87 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="en">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
     <link rel="icon" type="image/x-icon" href="images/logo/favicon.ico">
     <title>Aurore &amp; Pedro</title>
     <script>try{Typekit.load();}catch(e){}</script>
     <style type="text/css">.addthisevent {visibility:hidden;}.addthisevent-drop ._url,.addthisevent-drop ._start,.addthisevent-drop ._end,.addthisevent-drop ._zonecode,.addthisevent-drop ._summary,.addthisevent-drop ._description,.addthisevent-drop ._location,.addthisevent-drop ._organizer,.addthisevent-drop ._organizer_email,.addthisevent-drop ._attendees,.addthisevent-drop ._facebook_event,.addthisevent-drop ._all_day_event {display:none!important;}</style>
     <link rel="stylesheet" href="main.css">
-    <script>
+    <script type="text/javascript">
+  	  function change() {
+  		const queryString = window.location.search;
+  		const urlParams = new URLSearchParams(queryString);
+
+        var selectBox = document.getElementById("selectBox");
+  		if (selectBox.options[selectBox.selectedIndex].value == "pt") {
+			urlParams.set("lang", "pt");
+  		} else if (selectBox.options[selectBox.selectedIndex].value == "fr") {
+			urlParams.set("lang", "fr");
+  		} else {
+			urlParams.set("lang", "en");
+  		}
+	    document.location.search = urlParams.toString();
+	  }
+	  function translate() {
+        document.body.style.display = "none";
+
+		const queryString = window.location.search;
+		const urlParams = new URLSearchParams(queryString);
+		const lang = urlParams.get('lang')
+
+        var selectBox = document.getElementById("selectBox");
+
+  		if (lang == "pt") {
+		  selectBox.children[2].setAttribute("selected", "");
+		  var data = {
+		    schedule: "HORARIO",
+		    lodging: "ALOJAMENTO",
+		    gettingMarried: "vão casar-se",
+		    scrollForMore: "SCROLL FOR MORE",
+		    friendAndFamily: "Our dearest friends &amp; family",
+		    who: "QUEM",
+		    when: "QUANDO",
+		    where: "ONDE"
+		  };
+  		} else if (lang == "fr") {
+  		  selectBox.children[1].setAttribute("selected", "");
+		  var data = {
+		    schedule: "SCHEDULE",
+		    lodging: "LODGING",
+		    gettingMarried: "se marient",
+		    scrollForMore: "SCROLL FOR MORE",
+		    friendAndFamily: "Our dearest friends &amp; family",
+		    who: "QUI",
+		    when: "QUAND",
+		    where: "OU"
+		  };
+  		} else {
+  		  selectBox.children[0].setAttribute("selected", "");
+		  var data = {
+		    schedule: "SCHEDULE",
+		    lodging: "LODGING",
+		    gettingMarried: "are getting married",
+		    scrollForMore: "SCROLL FOR MORE",
+		    friendAndFamily: "Our dearest friends &amp; family",
+		    who: "WHO",
+		    when: "WHEN",
+		    where: "WHERE"
+		  };
+  		}
+
+		document.body.innerHTML = document.body.innerHTML
+		        .replace("{{schedule}}", data.schedule)
+		        .replace("{{schedule}}", data.schedule)
+		        .replace("{{lodging}}", data.lodging)
+		        .replace("{{gettingMarried}}", data.gettingMarried)
+		        .replace("{{scrollForMore}}", data.scrollForMore)
+		        .replace("{{friendAndFamily}}", data.friendAndFamily)
+		        .replace("{{who}}", data.who)
+			    .replace("{{when}}", data.when)
+		        .replace("{{where}}", data.where);
+
+		document.body.style.display = "block";
+	  }
       function resizeToMax(id){
         myImage = new Image() 
         var img = document.getElementById(id);
@@ -21,9 +96,6 @@
           img.style.height = "100%";
         }
       }
-    </script>
-    <meta charset="utf-8">
-    <script type="text/javascript">
       function onClickFriday() {
         document.getElementById("schedule-friday-header").classList.remove("active");
         document.getElementById("schedule-friday-header").classList.add("active");
@@ -72,7 +144,7 @@
       }
     </script>
   </head>
-  <body>
+  <body style="display: none">
     <div id="header">
       <div>
         <div class="navigation-wrapper centered-navigation">
@@ -85,13 +157,13 @@
                 <a href="#overview">RSVP</a>
               </li>
               <li class="nav-link" onclick="hideMobileMenu()">
-                <a href="#schedule">SCHEDULE</a>
+                <a href="#schedule">{{schedule}}</a>
               </li>
               <li class="nav-link mobile-only" onclick="hideMobileMenu()">
                 <a href="#getting-there">GETTING THERE</a>
               </li>
               <li class="nav-link" onclick="hideMobileMenu()">
-                <a href="#lodging">LODGING</a>
+                <a href="#lodging">{{lodging}}</a>
               </li>
               <li class="nav-link mobile-only" onclick="hideMobileMenu()">
                 <a href="#wedding-party">WEDDING PARTY</a>
@@ -102,6 +174,13 @@
               <li class="nav-link" onclick="hideMobileMenu()">
                 <a href="#faq">FAQ</a>
               </li>
+              <li class="nav-link" onclick="hideMobileMenu()">
+				<select id="selectBox" onchange="change();">
+				   <option value="en">English</option>
+				   <option value="fr">Français</option>
+				   <option value="pt">Português</option>
+				</select>
+              </li>
             </ul>
           </nav>
         </div>
@@ -111,10 +190,10 @@
     <section id="hero" class="pane">
       <div class="pane-title" id="site-title-pane">
         <h1>AURORE &amp; PEDRO</h1>
-        <p class="byline">are getting married</p>
+        <p class="byline">{{gettingMarried}}</p>
       </div>
       <div class="scrollplz">
-        <p>SCROLL FOR MORE</p>
+        <p>{{scrollForMore}}</p>
         <svg id="scrollplz-arrow" height="50px" viewBox="0 0 5 27" stroke="none" fill="currentColor">
           <rect x="2" y="0" width="1" height="23"></rect>
           <path d="M0,22.244 L2.493,26.562 L4.986,22.244 L0,22.244 Z"></path>
@@ -132,10 +211,10 @@
           <div class="who">
             <div class="title-section">
               <img id="who-icon" src="images/svg/tent.svg">
-              <h2>WHO</h2>
+              <h2>{{who}}</h2>
               <span class="underline"></span>
             </div>
-            <p class="larger">Our dearest friends &amp; family</p>
+            <p class="larger">{{friendAndFamily}}</p>
             <p class="sans-caps">FROM NEAR AND AFAR</p>
             <p><a class="link-button golden" target="_blank" href="https://withjoy.com/pedro-black-and-aurore-staes/rsvp">RSVP</a></p>
           </div>
@@ -144,7 +223,7 @@
           <div class="when">
             <div class="title-section">
               <img id="when-icon" src="images/svg/watch.svg">
-              <h2>WHEN</h2>
+              <h2>{{when}}</h2>
               <span class="underline"></span>
             </div>
             <p class="larger">September 11, 2021</p>
@@ -163,7 +242,7 @@
           <div class="where">
             <div class="title-section">
               <img id="where-icon" src="images/svg/mountains.svg">
-              <h2>WHERE</h2>
+              <h2>{{where}}</h2>
               <span class="underline"></span>
             </div>
             <p class="larger">Cintegabelle, France</p>
@@ -320,14 +399,14 @@
           <h4>hotel</h4>
           <p>Wblablabla.</p>
           <div id="hotel-button">
-            <div><a href="#" class="link-button golden">Book</a></div>
+            <div><a href="#" class="link-button blue">Book</a></div>
           </div>
         </div>
         <div class="airbnb">
           <img class="round" src="https://s3.amazonaws.com/ameliaandsteveassets/airbnb.jpg">
           <h4>airbnb</h4>
           <p>Wblablabla.</p>
-          <a href="https://www.airbnb.com/s/Asheville--NC--United-States?checkin=9%2F18%2F2015&amp;checkout=09%2F20%2F2015" class="link-button golden">Search</a>
+          <a href="https://www.airbnb.com/s/Asheville--NC--United-States?checkin=9%2F18%2F2015&amp;checkout=09%2F20%2F2015" class="link-button blue">Search</a>
         </div>
       </div>
     </section>
@@ -562,5 +641,7 @@
         </div>
       </div>
     </section>
+
+    <script type="text/javascript">translate()</script>
   </body>
 </html>

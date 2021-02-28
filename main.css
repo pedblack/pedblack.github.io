@@ -245,8 +245,11 @@ html {
 	border-color: #000
 }
 
+#lodging .underline {
+	border-color: #5655b5
+}
+
 #activity .underline,
-#lodging .underline,
 #registry .underline,
 #schedule .underline,
 #photos .underline,
@@ -269,6 +272,10 @@ html {
 
 #lodging {
 	background-color: #FFEC6C
+}
+
+#lodging h2 {
+	color: #5655b5
 }
 
 #playlist {
@@ -368,6 +375,23 @@ input[type=submit].link-button.golden:hover {
 	color: #fff;
 	background-color: #cca543;
 	border-color: #cca543
+}
+
+.link-button.blue,
+input[type=submit].link-button.blue {
+	color: #5655b5;
+	border-color: #5655b5
+}
+
+.link-button.blue:active,
+.link-button.blue:focus,
+.link-button.blue:hover,
+input[type=submit].link-button.blue:active,
+input[type=submit].link-button.blue:focus,
+input[type=submit].link-button.blue:hover {
+	color: #fff;
+	background-color: #5655b5;
+	border-color: #5655b5
 }
 
 @media screen and (max-width:667px) {
