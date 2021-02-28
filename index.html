@@ -101,12 +101,16 @@
             lodgingAirbnbTitle: "airbnb/booking",
             lodgingAirbnbText: "Just remember to look for something not too far from the wedding venue",
             lodgingAirbnbButton: "Pesquisa",
+			weddingParty: "A MESA DOS NOIVOS",
 			weddingPartyPreTitle: "THE",
-            weddingPartyTitle: "WEDDING PARTY",
             weddingPartyStory1: "Once upon a time, in a land of frost and snow, two southern european souls crossed paths. Aurore, a French writer, and Pedro, a Portuguese musician, who both worked undercover as a researcher and an engineer, respectively",
 	        weddingPartyStory2: "It all happened one night. Looking for the secrets of the Universe in beverages famous for enlightening the mind while sharpening the senses, Aurore and Pedro were, unknowingly, about to meet. The music was loud but their hearts beat stronger as their eyes found each other across the room. With a welcoming smile she invited him over. Cutting through the crowd, as a Portuguese navigator braving the seas, he came closer, tried a joke and they shared a laugh that will never end",
 		    weddingPartyStory3: "Now they have decided to celebrate their bond with family and friends",
 		    weddingPartyStory4: "They count on you to make this event magical!",
+            weddingPartyBride: "a noiva",
+            weddingPartyGroom: "o noivo",
+			weddingPartyBestman: "padrinho",
+            weddingPartyBridesmaid: "madrinha",
 			registry: "REGISTRY",
             registryText: "The best present you could possibly give us is the celebration of our marriage. However, if you’d like to spoil us, we’ve picked out a few items pique our interests",
             registryButton: "Our Registry",
@@ -192,12 +196,16 @@
             lodgingAirbnbTitle: "airbnb/booking",
             lodgingAirbnbText: "Just remember to look for something not too far from the wedding venue",
             lodgingAirbnbButton: "Search",
+			weddingParty: "WEDDING PARTY",
 			weddingPartyPreTitle: "THE",
-            weddingPartyTitle: "WEDDING PARTY",
             weddingPartyStory1: "Once upon a time, in a land of frost and snow, two southern european souls crossed paths. Aurore, a French writer, and Pedro, a Portuguese musician, who both worked undercover as a researcher and an engineer, respectively",
 	        weddingPartyStory2: "It all happened one night. Looking for the secrets of the Universe in beverages famous for enlightening the mind while sharpening the senses, Aurore and Pedro were, unknowingly, about to meet. The music was loud but their hearts beat stronger as their eyes found each other across the room. With a welcoming smile she invited him over. Cutting through the crowd, as a Portuguese navigator braving the seas, he came closer, tried a joke and they shared a laugh that will never end",
 		    weddingPartyStory3: "Now they have decided to celebrate their bond with family and friends",
 		    weddingPartyStory4: "They count on you to make this event magical!",
+            weddingPartyBride: "the bride",
+            weddingPartyGroom: "the groom",
+			weddingPartyBestman: "best man",
+            weddingPartyBridesmaid: "bridesmaid",
 			registry: "REGISTRY",
             registryText: "The best present you could possibly give us is the celebration of our marriage. However, if you’d like to spoil us, we’ve picked out a few items pique our interests",
             registryButton: "Our Registry",
@@ -282,12 +290,16 @@
             lodgingAirbnbTitle: "airbnb/booking",
             lodgingAirbnbText: "Just remember to look for something not too far from the wedding venue",
             lodgingAirbnbButton: "Search",
+			weddingParty: "WEDDING PARTY",
 			weddingPartyPreTitle: "THE",
-            weddingPartyTitle: "WEDDING PARTY",
             weddingPartyStory1: "Once upon a time, in a land of frost and snow, two southern european souls crossed paths. Aurore, a French writer, and Pedro, a Portuguese musician, who both worked undercover as a researcher and an engineer, respectively",
 	        weddingPartyStory2: "It all happened one night. Looking for the secrets of the Universe in beverages famous for enlightening the mind while sharpening the senses, Aurore and Pedro were, unknowingly, about to meet. The music was loud but their hearts beat stronger as their eyes found each other across the room. With a welcoming smile she invited him over. Cutting through the crowd, as a Portuguese navigator braving the seas, he came closer, tried a joke and they shared a laugh that will never end",
 		    weddingPartyStory3: "Now they have decided to celebrate their bond with family and friends",
 		    weddingPartyStory4: "They count on you to make this event magical!",
+            weddingPartyBride: "the bride",
+            weddingPartyGroom: "the groom",
+			weddingPartyBestman: "best man",
+            weddingPartyBridesmaid: "bridesmaid",
 			registry: "REGISTRY",
             registryText: "The best present you could possibly give us is the celebration of our marriage. However, if you’d like to spoil us, we’ve picked out a few items pique our interests",
             registryButton: "Our Registry",
@@ -367,35 +379,40 @@
 		        .replace("{{travelBeyssacNoteText}}", data.travelBeyssacNoteText)
 		        .replace("{{travelBeyssacButton}}", data.travelBeyssacButton)
 		        .replaceAll("{{lodging}}", data.lodging)
-		        .replaceAll("{{lodgingListTitle}}", data.lodgingListTitle)
-		        .replaceAll("{{lodgingListText}}", data.lodgingListText)
-		        .replaceAll("{{lodgingListButton}}", data.lodgingListButton)
-		        .replaceAll("{{lodgingAirbnbTitle}}", data.lodgingAirbnbTitle)
-		        .replaceAll("{{lodgingAirbnbText}}", data.lodgingAirbnbText)
-		        .replaceAll("{{lodgingAirbnbButton}}", data.lodgingAirbnbButton)
-		        .replaceAll("{{weddingPartyPreTitle}}", data.weddingPartyPreTitle)
-		        .replaceAll("{{weddingPartyTitle}}", data.weddingPartyTitle)
-		        .replaceAll("{{weddingPartyStory1}}", data.weddingPartyStory1)
-		        .replaceAll("{{weddingPartyStory2}}", data.weddingPartyStory2)
-		        .replaceAll("{{weddingPartyStory3}}", data.weddingPartyStory3)
-		        .replaceAll("{{weddingPartyStory4}}", data.weddingPartyStory4)
+		        .replace("{{lodgingListTitle}}", data.lodgingListTitle)
+		        .replace("{{lodgingListText}}", data.lodgingListText)
+		        .replace("{{lodgingListButton}}", data.lodgingListButton)
+		        .replace("{{lodgingAirbnbTitle}}", data.lodgingAirbnbTitle)
+		        .replace("{{lodgingAirbnbText}}", data.lodgingAirbnbText)
+		        .replace("{{lodgingAirbnbButton}}", data.lodgingAirbnbButton)
+		        .replaceAll("{{weddingParty}}", data.weddingParty)
+		        .replace("{{weddingPartyPreTitle}}", data.weddingPartyPreTitle)
+		        .replace("{{weddingPartyTitle}}", data.weddingPartyTitle)
+		        .replace("{{weddingPartyStory1}}", data.weddingPartyStory1)
+		        .replace("{{weddingPartyStory2}}", data.weddingPartyStory2)
+		        .replace("{{weddingPartyStory3}}", data.weddingPartyStory3)
+		        .replace("{{weddingPartyStory4}}", data.weddingPartyStory4)
+		        .replace("{{weddingPartyBride}}", data.weddingPartyBride)
+		        .replace("{{weddingPartyGroom}}", data.weddingPartyGroom)
+		        .replaceAll("{{weddingPartyBestman}}", data.weddingPartyBestman)
+		        .replaceAll("{{weddingPartyBridesmaid}}", data.weddingPartyBridesmaid)
 		        .replaceAll("{{registry}}", data.registry)
-		        .replaceAll("{{registryText}}", data.registryText)
-		        .replaceAll("{{registryButton}}", data.registryButton)
-         		.replaceAll("{{photos}}", data.photos)
-         		.replaceAll("{{photosText}}", data.photosText)
-         		.replaceAll("{{faqQuestion1}}", data.faqQuestion1)
-         		.replaceAll("{{faqResponse1}}", data.faqResponse1)
-         		.replaceAll("{{faqQuestion2}}", data.faqQuestion2)
-         		.replaceAll("{{faqResponse2}}", data.faqResponse2)
-         		.replaceAll("{{faqResponse21}}", data.faqResponse21)
-         		.replaceAll("{{faqQuestion3}}", data.faqQuestion3)
-         		.replaceAll("{{faqResponse3}}", data.faqResponse3)
-         		.replaceAll("{{faqQuestion4}}", data.faqQuestion4)
-         		.replaceAll("{{faqResponse4}}", data.faqResponse4)
-         		.replaceAll("{{faqResponse41}}", data.faqResponse41)
-         		.replaceAll("{{faqQuestion5}}", data.faqQuestion5)
-         		.replaceAll("{{faqResponse5}}", data.faqResponse5);
+		        .replace("{{registryText}}", data.registryText)
+		        .replace("{{registryButton}}", data.registryButton)
+         		.replace("{{photos}}", data.photos)
+         		.replace("{{photosText}}", data.photosText)
+         		.replace("{{faqQuestion1}}", data.faqQuestion1)
+         		.replace("{{faqResponse1}}", data.faqResponse1)
+         		.replace("{{faqQuestion2}}", data.faqQuestion2)
+         		.replace("{{faqResponse2}}", data.faqResponse2)
+         		.replace("{{faqResponse21}}", data.faqResponse21)
+         		.replace("{{faqQuestion3}}", data.faqQuestion3)
+         		.replace("{{faqResponse3}}", data.faqResponse3)
+         		.replace("{{faqQuestion4}}", data.faqQuestion4)
+         		.replace("{{faqResponse4}}", data.faqResponse4)
+         		.replace("{{faqResponse41}}", data.faqResponse41)
+         		.replace("{{faqQuestion5}}", data.faqQuestion5)
+         		.replace("{{faqResponse5}}", data.faqResponse5);
 
 		document.body.style.display = "block";
 	  }
@@ -479,7 +496,7 @@
                 <a href="#lodging">{{lodging}}</a>
               </li>
               <li class="nav-link mobile-only" onclick="hideMobileMenu()">
-                <a href="#wedding-party">WEDDING PARTY</a>
+                <a href="#wedding-party">{{weddingParty}}</a>
               </li>
               <li class="nav-link mobile-only" onclick="hideMobileMenu()">
                 <a href="#registry">{{registry}}</a>
@@ -733,7 +750,7 @@
       <div class="pane-content">
         <div class="pane-title">
           <h6>{{weddingPartyPreTitle}}</h6>
-          <h2>{{weddingPartyTitle}}</h2>
+          <h2>{{weddingParty}}</h2>
           <span class="underline"></span>
         </div>
         <div class="pane-row">
@@ -746,64 +763,64 @@
           <div class="party-person">
             <img src="images/wedding_party/aurore.jpg">
             <h4 class="party-person-name">aurore staes</h4>
-            <h5 class="party-person-description">the bride</h5>
+            <h5 class="party-person-description">{{weddingPartyBride}}</h5>
           </div>
           <div class="party-person">
             <img src="images/wedding_party/pedro.jpg">
             <h4 class="party-person-name">pedro<br> black</h4>
-            <h5 class="party-person-description">the groom</h5>
+            <h5 class="party-person-description">{{weddingPartyGroom}}</h5>
           </div>
         </div>
         <div class="party-people">
           <div class="party-person">
             <img src="images/wedding_party/frederico.jpg">
             <h4 class="party-person-name">frederico<br> catalão</h4>
-            <h5 class="party-person-description">best man</h5>
+            <h5 class="party-person-description">{{weddingPartyBestman}}</h5>
           </div>
           <div class="party-person">
             <img src="images/wedding_party/marine.png">
             <h4 class="party-person-name">marine<br>vincent</h4>
-            <h5 class="party-person-description">bridesmaid</h5>
+            <h5 class="party-person-description">{{weddingPartyBridesmaid}}</h5>
           </div>
           <div class="party-person">
             <img src="images/wedding_party/goncalo.jpg">
             <h4 class="party-person-name">gonçalo<br> andrade e sousa</h4>
-            <h5 class="party-person-description">best man</h5>
+            <h5 class="party-person-description">{{weddingPartyBestman}}</h5>
           </div>
           <div class="party-person">
             <img src="images/wedding_party/anais.jpg">
             <h4 class="party-person-name">anaïs<br> pessato</h4>
-            <h5 class="party-person-description">bridesmaid</h5>
+            <h5 class="party-person-description">{{weddingPartyBridesmaid}}</h5>
           </div>
           <div class="party-person">
             <img src="images/wedding_party/muna.png">
             <h4 class="party-person-name">segismundo<br> bragança</h4>
-            <h5 class="party-person-description">best man</h5>
+            <h5 class="party-person-description">{{weddingPartyBestman}}</h5>
           </div>
           <div class="party-person">
             <img src="images/wedding_party/johannes.jpg">
             <h4 class="party-person-name">johannes<br> wolter</h4>
-            <h5 class="party-person-description">best man</h5>
+            <h5 class="party-person-description">{{weddingPartyBestman}}</h5>
           </div>
           <div class="party-person">
             <img src="images/wedding_party/camille.png">
             <h4 class="party-person-name">camille<br> pavy</h4>
-            <h5 class="party-person-description">bridesmaid</h5>
+            <h5 class="party-person-description">{{weddingPartyBridesmaid}}</h5>
           </div>
           <div class="party-person">
             <img src="images/wedding_party/sassa.jpg">
             <h4 class="party-person-name">salvador<br> líbano monteiro</h4>
-            <h5 class="party-person-description">best man</h5>
+            <h5 class="party-person-description">{{weddingPartyBestman}}</h5>
           </div>
           <div class="party-person">
             <img src="images/wedding_party/luis.jpg">
             <h4 class="party-person-name">luís<br> trocado</h4>
-            <h5 class="party-person-description">best man</h5>
+            <h5 class="party-person-description">{{weddingPartyBestman}}</h5>
           </div>
           <div class="party-person">
             <img src="images/wedding_party/bastien.png">
             <h4 class="party-person-name">bastien<br> staes</h4>
-            <h5 class="party-person-description">bridesman</h5>
+            <h5 class="party-person-description">{{weddingPartyBestman}}</h5>
           </div>
         </div>
       </div>
@@ -840,7 +857,6 @@
           <p>{{photosText}}</p>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
-        <!-- <div class="pa-carousel-widget" style="width:100%; height:480px; display:none;" -->
         <div class="pa-gallery-player-widget" style="width:100%; height:480px; display:none;"
           data-link="https://photos.app.goo.gl/3ZbDvxPUdiHJ1NFE9"
           data-title="A&amp;P"
