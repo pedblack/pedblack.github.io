@@ -38,51 +38,364 @@
   		if (lang == "pt") {
 		  selectBox.children[2].setAttribute("selected", "");
 		  var data = {
-		    schedule: "HORARIO",
-		    lodging: "ALOJAMENTO",
-		    gettingMarried: "vão casar-se",
-		    scrollForMore: "SCROLL FOR MORE",
-		    friendAndFamily: "Our dearest friends &amp; family",
+		    topTitle: "vão casar-se",
+		    topCallToAction: "SAIBA MAIS",
 		    who: "QUEM",
+		    whoTitle: "Família &amp; Amigos",
+			whoSubtitle: "VINDOS DE LONGE E DE PERTO",
+			whoButton: "RSVP",
 		    when: "QUANDO",
-		    where: "ONDE"
+			whenTitle: "11 Septembro, 2021",
+			whenSubtitle: "UM SÁBADO",
+			whenButton: "Adicionar ao cal.",
+		    where: "ONDE",
+			whereTitle: "Cintegabelle, França",
+            whereSubtitle: "DOMAINE DU BEYSSAC",
+            whereButton: "ver no mapa",
+		    schedule: "PROGRAMA",
+            friday: "SEXTA",
+			fridayTitle1: "Festa de Boas-vindas",
+            fridayAttendees1: "Amigos vindos do estrangeiro",
+            fridayDress1: "Dresscode: Casual",
+            fridayTime1: "Começa às 21h00",
+            fridayWhere1: "Domaine du Beyssac",
+            saturday: "SÁBADO",
+            saturdayTitle1: "Cerimónia",
+            saturdayAttendees1: "Todos os convidados",
+            saturdayDress1: "Dresscode: Elegante",
+            saturdayTime1: "Das 14h30 às 15h30",
+            saturdayWhere1: "Domaine du Beyssac",
+            saturdayTitle2: "Casamento Civil",
+            saturdayAttendees2: "Todos os convidados",
+            saturdayDress2: "Dresscode: Elegante",
+            saturdayTime2: "Das 16h00 às 17h00",
+            saturdayWhere2: "Mairie de Cintegabelle",
+            saturdayTitle3: "Copo de àgua",
+            saturdayAttendees3: "Todos os convidados",
+			saturdayDress3: "Dresscode: Elegante",
+            saturdayTime3: "Começa às 18h00",
+            saturdayWhere3: "Domaine du Beyssac",
+            sunday: "DOMINGO",
+            sundayTitle1: "Almoço de despedida",
+            sundayAttendees1: "Todos os interessados",
+            sundayDress1: "Dresscode: Casual (fato de banho opcional &#128521;)",
+            sundayTime1: "Das 13h00 às 17h00",
+            sundayWhere1: "Domaine du Beyssac",
+			travel: "A VIAGEM",
+            travelPlane: "PLANE TO TOULOUSE",
+            travelPlaneZurich: "From Zurich",
+			travelPlaneZurichText: ": there is a direct flight from Basel with Easyjet",
+            travelPlaneLisbon: "From Lisbon",
+			travelPlaneLisbonText: ": there are direct flights with Tap or Ryanair",
+			travelPlaneButton: "Find Flights",
+            travelBeyssac: "TO BEYSSAC",
+            travelBeyssacText1: "We recommend you pair up with other invitees and rent a car at the airport",
+            travelBeyssacText2: "We have created the document below to help you find a carpool",
+            travelBeyssacNote: "NOTE",
+			travelBeyssacNoteText: ": Depending on where you will stay, public transportation might also be an option, albeit more cumbersome and limited",
+			travelBeyssacButton: "Join a Carpool",
+		    lodging: "ALOJAMENTO",
+            lodgingListTitle: "a nossa lista",
+            lodgingListText: "We have compiled a list of places to stay whithin a 20 min drive radius. Some of which may not have a presence online",
+            lodgingListButton: "A NOSSA LISTA",
+            lodgingAirbnbTitle: "airbnb/booking",
+            lodgingAirbnbText: "Just remember to look for something not too far from the wedding venue",
+            lodgingAirbnbButton: "Pesquisa",
+			weddingPartyPreTitle: "THE",
+            weddingPartyTitle: "WEDDING PARTY",
+            weddingPartyStory1: "Once upon a time, in a land of frost and snow, two southern european souls crossed paths. Aurore, a French writer, and Pedro, a Portuguese musician, who both worked undercover as a researcher and an engineer, respectively",
+	        weddingPartyStory2: "It all happened one night. Looking for the secrets of the Universe in beverages famous for enlightening the mind while sharpening the senses, Aurore and Pedro were, unknowingly, about to meet. The music was loud but their hearts beat stronger as their eyes found each other across the room. With a welcoming smile she invited him over. Cutting through the crowd, as a Portuguese navigator braving the seas, he came closer, tried a joke and they shared a laugh that will never end",
+		    weddingPartyStory3: "Now they have decided to celebrate their bond with family and friends",
+		    weddingPartyStory4: "They count on you to make this event magical!",
+			registry: "REGISTRY",
+            registryText: "The best present you could possibly give us is the celebration of our marriage. However, if you’d like to spoil us, we’ve picked out a few items pique our interests",
+            registryButton: "Our Registry",
+			photos:"PHOTOS OF US",
+			photosText: "Just in case you forgot what we look like",  
+            faqQuestion1: "When should I arrive and how long should I stay?",
+            faqResponse1: "Most of the events kick off on Friday night and end on Sunday afternoon, but please enjoy the area for as long as you're able",
+            faqQuestion2: "Any tips on what should I wear?",
+            faqResponse2: "Weather permitting, the ceremony and parts of the reception will be outdoors, so shoes that can traverse gravel and grass would make your life easier",
+            faqResponse21: "<b>Dress code</b>: Elegant",
+            faqQuestion3: "Should I pack anything special?",
+            faqResponse3: "The wedding venue has a swimming pool so, if the weather is right and you would like to take a swim on Sunday, pack a bathing suit",
+            faqQuestion4: "What is the weather like in the region this time of year?",
+            faqResponse4: "In the beginning of September, Cintegabelle averages a <b>high of 24°C</b> and a <b>low of 14°C</b>. For a more detailed view ",
+            faqResponse41: "check this website",
+            faqQuestion5: "Will you be accommodating any diet restrictions?",
+            faqResponse5: "We will accommodatingmodate vegetarian meals so please let us know in the RSVP if that is your preferred choice. If you have any other dietary concerns, feel free to let us know so we can explore options for you!"
 		  };
+  
   		} else if (lang == "fr") {
   		  selectBox.children[1].setAttribute("selected", "");
 		  var data = {
-		    schedule: "SCHEDULE",
-		    lodging: "LODGING",
-		    gettingMarried: "se marient",
-		    scrollForMore: "SCROLL FOR MORE",
-		    friendAndFamily: "Our dearest friends &amp; family",
+		    topTitle: "se marient",
+		    topCallToAction: "SCROLL FOR MORE",
 		    who: "QUI",
+		    whoTitle: "Famille &amp; amies",
+			whoSubtitle: "FROM NEAR AND AFAR",
+			whoButton: "RSVP",
 		    when: "QUAND",
-		    where: "OU"
+			whenTitle: "11 Septembre, 2021",
+			whenSubtitle: "UN SAMEDI",
+			whenButton: "Add to Calendar",
+		    where: "OU",
+			whereTitle: "Cintegabelle, France",
+            whereSubtitle: "DOMAINE DU BEYSSAC",
+            whereButton: "see on map",
+		    schedule: "PROGRAMATION",
+            friday: "FRIDAY",
+			fridayTitle1: "Welcome Party",
+            fridayAttendees1: "Friends from abroad",
+            fridayDress1: "Dress: Casual",
+            fridayTime1: "Starting at 21:00",
+            fridayWhere1: "Domaine du Beyssac",
+            saturday: "SATURDAY",
+            saturdayTitle1: "Ceremony",
+            saturdayAttendees1: "All guests",
+            saturdayDress1: "Dress: Elegant",
+            saturdayTime1: "14:30 to 15:30",
+            saturdayWhere1: "Domaine du Beyssac",
+            saturdayTitle2: "Civil Wedding",
+            saturdayAttendees2: "All guests",
+            saturdayDress2: "Dress: Elegant",
+            saturdayTime2: "16:00 to 17:00",
+            saturdayWhere2: "Mairie de Cintegabelle",
+            saturdayTitle3: "Wedding Reception",
+            saturdayAttendees3: "All guests",
+			saturdayDress3: "Dress: Elegant",
+            saturdayTime3: "Starting at 18:00",
+            saturdayWhere3: "Domaine du Beyssac",
+            sunday: "SUNDAY",
+            sundayTitle1: "Farewell Lunch",
+            sundayAttendees1: "All Interested",
+            sundayDress1: "Dress: Casual (swimsuit optional &#128521;)",
+            sundayTime1: "13:00 to 17:00",
+            sundayWhere1: "Domaine du Beyssac",
+			travel: "TRAVEL",
+            travelPlane: "PLANE TO TOULOUSE",
+            travelPlaneZurich: "From Zurich",
+			travelPlaneZurichText: ": there is a direct flight from Basel with Easyjet",
+            travelPlaneLisbon: "From Lisbon",
+			travelPlaneLisbonText: ": there are direct flights with Tap or Ryanair",
+			travelPlaneButton: "Find Flights",
+            travelBeyssac: "TO BEYSSAC",
+            travelBeyssacText1: "We recommend you pair up with other invitees and rent a car at the airport",
+            travelBeyssacText2: "We have created the document below to help you find a carpool",
+            travelBeyssacNote: "NOTE",
+			travelBeyssacNoteText: ": Depending on where you will stay, public transportation might also be an option, albeit more cumbersome and limited",
+			travelBeyssacButton: "Join a Carpool",
+		    lodging: "LOGEMENT",
+            lodgingListTitle: "our list",
+            lodgingListText: "We have compiled a list of places to stay whithin a 20 min drive radius. Some of which may not have a presence online",
+            lodgingListButton: "SEE OUR LIST",
+            lodgingAirbnbTitle: "airbnb/booking",
+            lodgingAirbnbText: "Just remember to look for something not too far from the wedding venue",
+            lodgingAirbnbButton: "Search",
+			weddingPartyPreTitle: "THE",
+            weddingPartyTitle: "WEDDING PARTY",
+            weddingPartyStory1: "Once upon a time, in a land of frost and snow, two southern european souls crossed paths. Aurore, a French writer, and Pedro, a Portuguese musician, who both worked undercover as a researcher and an engineer, respectively",
+	        weddingPartyStory2: "It all happened one night. Looking for the secrets of the Universe in beverages famous for enlightening the mind while sharpening the senses, Aurore and Pedro were, unknowingly, about to meet. The music was loud but their hearts beat stronger as their eyes found each other across the room. With a welcoming smile she invited him over. Cutting through the crowd, as a Portuguese navigator braving the seas, he came closer, tried a joke and they shared a laugh that will never end",
+		    weddingPartyStory3: "Now they have decided to celebrate their bond with family and friends",
+		    weddingPartyStory4: "They count on you to make this event magical!",
+			registry: "REGISTRY",
+            registryText: "The best present you could possibly give us is the celebration of our marriage. However, if you’d like to spoil us, we’ve picked out a few items pique our interests",
+            registryButton: "Our Registry",
+			photos:"PHOTOS OF US",
+			photosText: "Just in case you forgot what we look like",  
+            faqQuestion1: "When should I arrive and how long should I stay?",
+            faqResponse1: "Most of the events kick off on Friday night and end on Sunday afternoon, but please enjoy the area for as long as you're able",
+            faqQuestion2: "Any tips on what should I wear?",
+            faqResponse2: "Weather permitting, the ceremony and parts of the reception will be outdoors, so shoes that can traverse gravel and grass would make your life easier",
+            faqResponse21: "<b>Dress code</b>: Elegant",
+            faqQuestion3: "Should I pack anything special?",
+            faqResponse3: "The wedding venue has a swimming pool so, if the weather is right and you would like to take a swim on Sunday, pack a bathing suit",
+            faqQuestion4: "What is the weather like in the region this time of year?",
+            faqResponse4: "In the beginning of September, Cintegabelle averages a <b>high of 24°C</b> and a <b>low of 14°C</b>. For a more detailed view ",
+            faqResponse41: "check this website",
+            faqQuestion5: "Will you be accommodating any diet restrictions?",
+            faqResponse5: "We will accommodatingmodate vegetarian meals so please let us know in the RSVP if that is your preferred choice. If you have any other dietary concerns, feel free to let us know so we can explore options for you!"
 		  };
   		} else {
   		  selectBox.children[0].setAttribute("selected", "");
 		  var data = {
-		    schedule: "SCHEDULE",
-		    lodging: "LODGING",
-		    gettingMarried: "are getting married",
-		    scrollForMore: "SCROLL FOR MORE",
-		    friendAndFamily: "Our dearest friends &amp; family",
+		    topTitle: "are getting married",
+		    topCallToAction: "SCROLL FOR MORE",
 		    who: "WHO",
+		    whoTitle: "Our dearest friends &amp; family",
+			whoSubtitle: "FROM NEAR AND AFAR",
+			whoButton: "RSVP",
 		    when: "WHEN",
-		    where: "WHERE"
+			whenTitle: "September 11, 2021",
+			whenSubtitle: "A SATURDAY",
+			whenButton: "A SATURDAY",
+		    where: "WHERE",
+			whereTitle: "Cintegabelle, France",
+            whereSubtitle: "DOMAINE DU BEYSSAC",
+            whereButton: "see on map",
+		    schedule: "SCHEDULE",
+            friday: "FRIDAY",
+			fridayTitle1: "Welcome Party",
+            fridayAttendees1: "Friends from abroad",
+            fridayDress1: "Dress: Casual",
+            fridayTime1: "Starting at 21:00",
+            fridayWhere1: "Domaine du Beyssac",
+            saturday: "SATURDAY",
+            saturdayTitle1: "Ceremony",
+            saturdayAttendees1: "All guests",
+            saturdayDress1: "Dress: Elegant",
+            saturdayTime1: "14:30 to 15:30",
+            saturdayWhere1: "Domaine du Beyssac",
+            saturdayTitle2: "Civil Wedding",
+            saturdayAttendees2: "All guests",
+            saturdayDress2: "Dress: Elegant",
+            saturdayTime2: "16:00 to 17:00",
+            saturdayWhere2: "Mairie de Cintegabelle",
+            saturdayTitle3: "Wedding Reception",
+            saturdayAttendees3: "All guests",
+			saturdayDress3: "Dress: Elegant",
+            saturdayTime3: "Starting at 18:00",
+            saturdayWhere3: "Domaine du Beyssac",
+            sunday: "SUNDAY",
+            sundayTitle1: "Farewell Lunch",
+            sundayAttendees1: "All Interested",
+            sundayDress1: "Dress: Casual (swimsuit optional &#128521;)",
+            sundayTime1: "13:00 to 17:00",
+            sundayWhere1: "Domaine du Beyssac",
+			travel: "GETTING THERE",
+            travelPlane: "PLANE TO TOULOUSE",
+            travelPlaneZurich: "From Zurich",
+			travelPlaneZurichText: ": there is a direct flight from Basel with Easyjet",
+            travelPlaneLisbon: "From Lisbon",
+			travelPlaneLisbonText: ": there are direct flights with Tap or Ryanair",
+			travelPlaneButton: "Find Flights",
+            travelBeyssac: "TO BEYSSAC",
+            travelBeyssacText1: "We recommend you pair up with other invitees and rent a car at the airport",
+            travelBeyssacText2: "We have created the document below to help you find a carpool",
+            travelBeyssacNote: "NOTE",
+			travelBeyssacNoteText: ": Depending on where you will stay, public transportation might also be an option, albeit more cumbersome and limited",
+			travelBeyssacButton: "Join a Carpool",
+		    lodging: "LODGING",
+            lodgingListTitle: "our list",
+            lodgingListText: "We have compiled a list of places to stay whithin a 20 min drive radius. Some of which may not have a presence online",
+            lodgingListButton: "SEE OUR LIST",
+            lodgingAirbnbTitle: "airbnb/booking",
+            lodgingAirbnbText: "Just remember to look for something not too far from the wedding venue",
+            lodgingAirbnbButton: "Search",
+			weddingPartyPreTitle: "THE",
+            weddingPartyTitle: "WEDDING PARTY",
+            weddingPartyStory1: "Once upon a time, in a land of frost and snow, two southern european souls crossed paths. Aurore, a French writer, and Pedro, a Portuguese musician, who both worked undercover as a researcher and an engineer, respectively",
+	        weddingPartyStory2: "It all happened one night. Looking for the secrets of the Universe in beverages famous for enlightening the mind while sharpening the senses, Aurore and Pedro were, unknowingly, about to meet. The music was loud but their hearts beat stronger as their eyes found each other across the room. With a welcoming smile she invited him over. Cutting through the crowd, as a Portuguese navigator braving the seas, he came closer, tried a joke and they shared a laugh that will never end",
+		    weddingPartyStory3: "Now they have decided to celebrate their bond with family and friends",
+		    weddingPartyStory4: "They count on you to make this event magical!",
+			registry: "REGISTRY",
+            registryText: "The best present you could possibly give us is the celebration of our marriage. However, if you’d like to spoil us, we’ve picked out a few items pique our interests",
+            registryButton: "Our Registry",
+			photos:"PHOTOS OF US",
+			photosText: "Just in case you forgot what we look like",  
+            faqQuestion1: "When should I arrive and how long should I stay?",
+            faqResponse1: "Most of the events kick off on Friday night and end on Sunday afternoon, but please enjoy the area for as long as you're able",
+            faqQuestion2: "Any tips on what should I wear?",
+            faqResponse2: "Weather permitting, the ceremony and parts of the reception will be outdoors, so shoes that can traverse gravel and grass would make your life easier",
+            faqResponse21: "<b>Dress code</b>: Elegant",
+            faqQuestion3: "Should I pack anything special?",
+            faqResponse3: "The wedding venue has a swimming pool so, if the weather is right and you would like to take a swim on Sunday, pack a bathing suit",
+            faqQuestion4: "What is the weather like in the region this time of year?",
+            faqResponse4: "In the beginning of September, Cintegabelle averages a <b>high of 24°C</b> and a <b>low of 14°C</b>. For a more detailed view ",
+            faqResponse41: "check this website",
+            faqQuestion5: "Will you be accommodating any diet restrictions?",
+            faqResponse5: "We will accommodatingmodate vegetarian meals so please let us know in the RSVP if that is your preferred choice. If you have any other dietary concerns, feel free to let us know so we can explore options for you!"
 		  };
   		}
 
 		document.body.innerHTML = document.body.innerHTML
-		        .replace("{{schedule}}", data.schedule)
-		        .replace("{{schedule}}", data.schedule)
-		        .replace("{{lodging}}", data.lodging)
-		        .replace("{{gettingMarried}}", data.gettingMarried)
-		        .replace("{{scrollForMore}}", data.scrollForMore)
-		        .replace("{{friendAndFamily}}", data.friendAndFamily)
+		        .replace("{{topTitle}}", data.topTitle)
+		        .replace("{{topCallToAction}}", data.topCallToAction)
 		        .replace("{{who}}", data.who)
+		        .replace("{{whoTitle}}", data.whoTitle)
+		        .replace("{{whoSubtitle}}", data.whoSubtitle)
+		        .replace("{{whoButton}}", data.whoButton)
 			    .replace("{{when}}", data.when)
-		        .replace("{{where}}", data.where);
+		        .replace("{{whenTitle}}", data.whenTitle)
+		        .replace("{{whenSubtitle}}", data.whenSubtitle)
+		        .replace("{{whenButton}}", data.whenButton)
+		        .replace("{{where}}", data.where)
+		        .replace("{{whereTitle}}", data.whereTitle)
+		        .replace("{{whereSubtitle}}", data.whereSubtitle)
+		        .replace("{{whereButton}}", data.whereButton)
+		        .replaceAll("{{schedule}}", data.schedule)
+		        .replace("{{friday}}", data.friday)
+		        .replace("{{fridayTitle1}}", data.fridayTitle1)
+		        .replace("{{fridayAttendees1}}", data.fridayAttendees1)
+		        .replace("{{fridayDress1}}", data.fridayDress1)
+		        .replace("{{fridayTime1}}", data.fridayTime1)
+		        .replace("{{fridayWhere1}}", data.fridayWhere1)
+		        .replace("{{saturday}}", data.saturday)
+		        .replace("{{saturdayTitle1}}", data.saturdayTitle1)
+		        .replace("{{saturdayAttendees1}}", data.saturdayAttendees1)
+		        .replace("{{saturdayDress1}}", data.saturdayDress1)
+		        .replace("{{saturdayTime1}}", data.saturdayTime1)
+		        .replace("{{saturdayWhere1}}", data.saturdayWhere1)
+		        .replace("{{saturdayTitle2}}", data.saturdayTitle2)
+		        .replace("{{saturdayAttendees2}}", data.saturdayAttendees2)
+		        .replace("{{saturdayDress2}}", data.saturdayDress2)
+		        .replace("{{saturdayTime2}}", data.saturdayTime2)
+		        .replace("{{saturdayWhere2}}", data.saturdayWhere2)
+		        .replace("{{saturdayTitle3}}", data.saturdayTitle3)
+		        .replace("{{saturdayAttendees3}}", data.saturdayAttendees3)
+		        .replace("{{saturdayDress3}}", data.saturdayDress3)
+		        .replace("{{saturdayTime3}}", data.saturdayTime3)
+		        .replace("{{saturdayWhere3}}", data.saturdayWhere3)
+		        .replace("{{sunday}}", data.sunday)
+		        .replace("{{sundayTitle1}}", data.sundayTitle1)
+		        .replace("{{sundayAttendees1}}", data.sundayAttendees1)
+		        .replace("{{sundayDress1}}", data.sundayDress1)
+		        .replace("{{sundayTime1}}", data.sundayTime1)
+		        .replace("{{sundayWhere1}}", data.sundayWhere1)
+		        .replaceAll("{{travel}}", data.travel)
+		        .replace("{{travelPlane}}", data.travelPlane)
+		        .replace("{{travelPlaneZurich}}", data.travelPlaneZurich)
+		        .replace("{{travelPlaneZurichText}}", data.travelPlaneZurichText)
+		        .replace("{{travelPlaneLisbon}}", data.travelPlaneLisbon)
+		        .replace("{{travelPlaneLisbonText}}", data.travelPlaneLisbonText)
+		        .replace("{{travelPlaneButton}}", data.travelPlaneButton)
+		        .replace("{{travelBeyssac}}", data.travelBeyssac)
+		        .replace("{{travelPlaneButton}}", data.travelPlaneButton)
+		        .replace("{{travelBeyssacText1}}", data.travelBeyssacText1)
+		        .replace("{{travelBeyssacText2}}", data.travelBeyssacText2)
+		        .replace("{{travelBeyssacNote}}", data.travelBeyssacNote)
+		        .replace("{{travelBeyssacNoteText}}", data.travelBeyssacNoteText)
+		        .replace("{{travelBeyssacButton}}", data.travelBeyssacButton)
+		        .replaceAll("{{lodging}}", data.lodging)
+		        .replaceAll("{{lodgingListTitle}}", data.lodgingListTitle)
+		        .replaceAll("{{lodgingListText}}", data.lodgingListText)
+		        .replaceAll("{{lodgingListButton}}", data.lodgingListButton)
+		        .replaceAll("{{lodgingAirbnbTitle}}", data.lodgingAirbnbTitle)
+		        .replaceAll("{{lodgingAirbnbText}}", data.lodgingAirbnbText)
+		        .replaceAll("{{lodgingAirbnbButton}}", data.lodgingAirbnbButton)
+		        .replaceAll("{{weddingPartyPreTitle}}", data.weddingPartyPreTitle)
+		        .replaceAll("{{weddingPartyTitle}}", data.weddingPartyTitle)
+		        .replaceAll("{{weddingPartyStory1}}", data.weddingPartyStory1)
+		        .replaceAll("{{weddingPartyStory2}}", data.weddingPartyStory2)
+		        .replaceAll("{{weddingPartyStory3}}", data.weddingPartyStory3)
+		        .replaceAll("{{weddingPartyStory4}}", data.weddingPartyStory4)
+		        .replaceAll("{{registry}}", data.registry)
+		        .replaceAll("{{registryText}}", data.registryText)
+		        .replaceAll("{{registryButton}}", data.registryButton)
+         		.replaceAll("{{photos}}", data.photos)
+         		.replaceAll("{{photosText}}", data.photosText)
+         		.replaceAll("{{faqQuestion1}}", data.faqQuestion1)
+         		.replaceAll("{{faqResponse1}}", data.faqResponse1)
+         		.replaceAll("{{faqQuestion2}}", data.faqQuestion2)
+         		.replaceAll("{{faqResponse2}}", data.faqResponse2)
+         		.replaceAll("{{faqResponse21}}", data.faqResponse21)
+         		.replaceAll("{{faqQuestion3}}", data.faqQuestion3)
+         		.replaceAll("{{faqResponse3}}", data.faqResponse3)
+         		.replaceAll("{{faqQuestion4}}", data.faqQuestion4)
+         		.replaceAll("{{faqResponse4}}", data.faqResponse4)
+         		.replaceAll("{{faqResponse41}}", data.faqResponse41)
+         		.replaceAll("{{faqQuestion5}}", data.faqQuestion5)
+         		.replaceAll("{{faqResponse5}}", data.faqResponse5);
 
 		document.body.style.display = "block";
 	  }
@@ -160,7 +473,7 @@
                 <a href="#schedule">{{schedule}}</a>
               </li>
               <li class="nav-link mobile-only" onclick="hideMobileMenu()">
-                <a href="#getting-there">GETTING THERE</a>
+                <a href="#getting-there">{{travel}}</a>
               </li>
               <li class="nav-link" onclick="hideMobileMenu()">
                 <a href="#lodging">{{lodging}}</a>
@@ -169,7 +482,7 @@
                 <a href="#wedding-party">WEDDING PARTY</a>
               </li>
               <li class="nav-link mobile-only" onclick="hideMobileMenu()">
-                <a href="#registry">REGISTRY</a>
+                <a href="#registry">{{registry}}</a>
               </li>
               <li class="nav-link" onclick="hideMobileMenu()">
                 <a href="#faq">FAQ</a>
@@ -190,10 +503,10 @@
     <section id="hero" class="pane">
       <div class="pane-title" id="site-title-pane">
         <h1>AURORE &amp; PEDRO</h1>
-        <p class="byline">{{gettingMarried}}</p>
+        <p class="byline">{{topTitle}}</p>
       </div>
       <div class="scrollplz">
-        <p>{{scrollForMore}}</p>
+        <p>{{topCallToAction}}</p>
         <svg id="scrollplz-arrow" height="50px" viewBox="0 0 5 27" stroke="none" fill="currentColor">
           <rect x="2" y="0" width="1" height="23"></rect>
           <path d="M0,22.244 L2.493,26.562 L4.986,22.244 L0,22.244 Z"></path>
@@ -214,9 +527,9 @@
               <h2>{{who}}</h2>
               <span class="underline"></span>
             </div>
-            <p class="larger">{{friendAndFamily}}</p>
-            <p class="sans-caps">FROM NEAR AND AFAR</p>
-            <p><a class="link-button golden" target="_blank" href="https://withjoy.com/pedro-black-and-aurore-staes/rsvp">RSVP</a></p>
+            <p class="larger">{{whoTitle}}</p>
+            <p class="sans-caps">{{whoSubtitle}}</p>
+            <p><a class="link-button golden" target="_blank" href="https://withjoy.com/pedro-black-and-aurore-staes/rsvp">{{whoButton}}</a></p>
           </div>
         </div>
         <div class="pane-row">
@@ -226,10 +539,10 @@
               <h2>{{when}}</h2>
               <span class="underline"></span>
             </div>
-            <p class="larger">September 11, 2021</p>
-            <p class="sans-caps">A SATURDAY</p>
+            <p class="larger">{{whenTitle}}</p>
+            <p class="sans-caps">{{whenSubtitle}}</p>
             <p>
-              <a title="" class=" link-button addthisevent-drop" id="atedrop1" onclick="onClickAddCalendar(this)">Add to Calendar
+              <a title="" class=" link-button addthisevent-drop" id="atedrop1" onclick="onClickAddCalendar(this)">{{whenButton}}
               <span id="atedrop1-drop" class="addthisevent_dropdown" style="left: 0px; top: 44px; display: none;">
               <span class="ategoogle" onclick="location.href = 'https://www.addevent.com/event/dU5910787+google'">Google</span>
               <span class="ateical" onclick="location.href = 'https://www.addevent.com/event/dU5910787+apple'">Apple</span>
@@ -245,9 +558,9 @@
               <h2>{{where}}</h2>
               <span class="underline"></span>
             </div>
-            <p class="larger">Cintegabelle, France</p>
-            <p class="sans-caps">DOMAINE DU BEYSSAC</p>
-            <p><a class="link-button golden" target="_blank" href="https://goo.gl/maps/iQnkpZiPeASzseeFA">see on map</a></p>
+            <p class="larger">{{whereTitle}}</p>
+            <p class="sans-caps">{{whereSubtitle}}</p>
+            <p><a class="link-button golden" target="_blank" href="https://goo.gl/maps/iQnkpZiPeASzseeFA">{{whereButton}}</a></p>
           </div>
         </div>
       </div>
@@ -260,33 +573,33 @@
     <section id="schedule" class="pane">
       <div class="pane-content">
         <div class="pane-title">
-          <h2>SCHEDULE</h2>
+          <h2>{{schedule}}</h2>
           <span class="underline"></span>
         </div>
         <div id="schedule-body">
           <div>
             <ul class="pane-row day-labels">
               <li>
-                <a id="schedule-friday-header" class="day" onclick="onClickFriday()">FRIDAY</a>
+                <a id="schedule-friday-header" class="day" onclick="onClickFriday()">{{friday}}</a>
               </li>
               <li>
-                <a id="schedule-saturday-header" class="day active" onclick="onClickSaturday()">SATURDAY</a>
+                <a id="schedule-saturday-header" class="day active" onclick="onClickSaturday()">{{saturday}}</a>
               </li>
               <li>
-                <a id="schedule-sunday-header" class="day" onclick="onClickSunday()">SUNDAY</a>
+                <a id="schedule-sunday-header" class="day" onclick="onClickSunday()">{{sunday}}</a>
               </li>
             </ul>
             <div id="schedule-friday" style="display: none">
               <div class="schedule-item">
                 <div class="left-side">
-                  <h4>Welcome Party</h4>
-                  <p class="attendees">Friends from abroad</p>
-                  <p class="dress">Dress: Casual</p>
+                  <h4>{{fridayTitle1}}</h4>
+                  <p class="attendees">{{fridayAttendees1}}</p>
+                  <p class="dress">{{fridayDress1}}</p>
                 </div>
                 <div class="right-side">
-                  <p>Starting at 21:00</p>
+                  <p>{{fridayTime1}}</p>
                   <p>
-                    <a href="https://goo.gl/maps/iQnkpZiPeASzseeFA" target="_blank">Domaine du Beyssac</a>
+                    <a href="https://goo.gl/maps/iQnkpZiPeASzseeFA" target="_blank">{{fridayWhere1}}</a>
                   </p>
                 </div>
               </div>
@@ -294,40 +607,40 @@
             <div id="schedule-saturday" style="display: block">
               <div class="schedule-item">
                 <div class="left-side">
-                  <h4>Ceremony</h4>
-                  <p class="attendees">All guests</p>
-                  <p class="dress">Dress: Elegant</p>
+                  <h4>{{saturdayTitle1}}</h4>
+                  <p class="attendees">{{saturdayAttendees1}}</p>
+                  <p class="dress">{{saturdayDress1}}</p>
                 </div>
                 <div class="right-side">
-                  <p>14:30 to 15:30</p>
+                  <p>{{saturdayTime1}}</p>
                   <p>
-                    <a href="https://goo.gl/maps/iQnkpZiPeASzseeFA" target="_blank">Domaine du Beyssac</a>
+                    <a href="https://goo.gl/maps/iQnkpZiPeASzseeFA" target="_blank">{{saturdayWhere1}}</a>
                   </p>
                 </div>
               </div>
               <div class="schedule-item">
                 <div class="left-side">
-                  <h4>Civil Wedding</h4>
-                  <p class="attendees">All guests</p>
-                  <p class="dress">Dress: Elegant</p>
+                  <h4>{{saturdayTitle2}}</h4>
+                  <p class="attendees">{{saturdayAttendees2}}</p>
+                  <p class="dress">{{saturdayDress2}}</p>
                 </div>
                 <div class="right-side">
-                  <p>16:00 to 17:00</p>
+                  <p>{{saturdayTime2}}</p>
                   <p>
-                    <a href="https://goo.gl/maps/h8wsDEkwYKXFCdCs5" target="_blank">Mairie de Cintegabelle</a>
+                    <a href="https://goo.gl/maps/h8wsDEkwYKXFCdCs5" target="_blank">{{saturdayWhere2}}</a>
                   </p>
                 </div>
               </div>
               <div class="schedule-item">
                 <div class="left-side">
-                  <h4>Wedding Reception</h4>
-                  <p class="attendees">All guests</p>
-                  <p class="dress">Dress: Elegant</p>
+                  <h4>{{saturdayTitle3}}</h4>
+                  <p class="attendees">{{saturdayAttendees3}}</p>
+                  <p class="dress">{{saturdayDress3}}</p>
                 </div>
                 <div class="right-side">
-                  <p>Starting at 18:00</p>
+                  <p>{{saturdayTime3}}</p>
                   <p>
-                    <a href="https://goo.gl/maps/iQnkpZiPeASzseeFA" target="_blank">Domaine du Beyssac</a>
+                    <a href="https://goo.gl/maps/iQnkpZiPeASzseeFA" target="_blank">{{saturdayWhere3}}</a>
                   </p>
                 </div>
               </div>
@@ -335,14 +648,14 @@
             <div id="schedule-sunday" style="display: none">
               <div class="schedule-item">
                 <div class="left-side">
-                  <h4>Farewell Lunch</h4>
-                  <p class="attendees">All Interested</p>
-                  <p class="dress">Dress: Casual (swimsuit optional &#128521;)</p>
+                  <h4>{{sundayTitle1}}</h4>
+                  <p class="attendees">{{sundayAttendees1}}</p>
+                  <p class="dress">{{sundayDress1}}</p>
                 </div>
                 <div class="right-side">
-                  <p>13:00 to 17:00</p>
+                  <p>{{sundayTime1}}</p>
                   <p>
-                    <a href="https://goo.gl/maps/iQnkpZiPeASzseeFA" target="_blank">Domaine du Beyssac</a>
+                    <a href="https://goo.gl/maps/iQnkpZiPeASzseeFA" target="_blank">{{sundayWhere1}}</a>
                   </p>
                 </div>
               </div>
@@ -362,24 +675,24 @@
     <section id="getting-there" class="pane">
       <div class="pane-content">
         <div class="pane-title">
-          <h2>GETTING THERE</h2>
+          <h2>{{travel}}</h2>
           <span class="underline"></span>
         </div>
         <div class="pane-row">
           <div class="transit-type">
             <img id="airplane-svg" src="images/svg/plane.svg">
-            <h3>PLANE TO TOULOUSE</h3>
-            <p><b>From Zurich</b>: there is a direct flight from Basel with Easyjet.</p>
-            <p><b>From Lisbon</b>: there are direct flights with Tap or Ryanair</p>
-            <a href="https://www.google.com/flights#flt=.TLS.2021-09-10*TLS..2021-09-13" class="link-button find-flights" target="_blank">Find Flights</a>
+            <h3>{{travelPlane}}</h3>
+            <p><b>{{travelPlaneZurich}}</b>{{travelPlaneZurichText}}</p>
+            <p><b>{{travelPlaneLisbon}}</b>{{travelPlaneLisbonText}}</p>
+            <a href="https://www.google.com/flights#flt=.TLS.2021-09-10*TLS..2021-09-13" class="link-button find-flights" target="_blank">{{travelPlaneButton}}</a>
           </div>
           <div class="transit-type">
             <img id="car-svg" src="images/svg/car.svg">
-            <h3>TO BEYSSAC</h3>
-            <p>We recommend you pair up with other invitees and rent a car at the airport.</p>
-            <p>We have created the document below to help you find a carpool.</p>
-            <p><b>NOTE</b>: Depending on where you will stay, public transportation might also be an option, albeit more cumbersome and limited.</p>
-            <a href="https://docs.google.com/spreadsheets/d/197qlTLFjb4-1KPVWA6n_bJCIl6q7xHMn5ostC4M_Eqc/edit#gid=714257730" class="link-button driving-directions" target="_blank">Join a Carpool</a>
+            <h3>{{travelBeyssac}}</h3>
+            <p>{{travelBeyssacText1}}</p>
+            <p>{{travelBeyssacText2}}</p>
+            <p><b>{{travelBeyssacNote}}</b>{{travelBeyssacNoteText}}</p>
+            <a href="https://docs.google.com/spreadsheets/d/197qlTLFjb4-1KPVWA6n_bJCIl6q7xHMn5ostC4M_Eqc/edit#gid=714257730" class="link-button driving-directions" target="_blank">{{travelBeyssacButton}}</a>
           </div>
         </div>
       </div>
@@ -392,22 +705,22 @@
     <section id="lodging" class="pane">
       <div class="pane-content">
         <div class="pane-title">
-          <h2>LODGING</h2>
+          <h2>{{lodging}}</h2>
           <span class="underline"></span>
         </div>
         <div class="hotel-container">
           <img class="round" src="images/our_list.jpg">
-          <h4>our list</h4>
-          <p>We have compiled a list of places to stay whithin a 20 min drive radius. Some of which may not have a presence online.</p>
+          <h4>{{lodgingListTitle}}</h4>
+          <p>{{lodgingListText}}</p>
           <div id="hotel-button">
-            <div><a href="https://docs.google.com/spreadsheets/d/197qlTLFjb4-1KPVWA6n_bJCIl6q7xHMn5ostC4M_Eqc/edit#gid=0" class="link-button blue">SEE OUR LIST</a></div>
+            <div><a href="https://docs.google.com/spreadsheets/d/197qlTLFjb4-1KPVWA6n_bJCIl6q7xHMn5ostC4M_Eqc/edit#gid=0" class="link-button blue">{{lodgingListButton}}</a></div>
           </div>
         </div>
         <div class="airbnb">
           <img class="round" src="images/airbnb.jpg">
-          <h4>airbnb/booking</h4>
-          <p>Just remember to look for something not too far from the wedding venue.</p>
-          <a href="https://www.airbnb.com/s/Picarrou--Cintegabelle/homes?adults=2&place_id=ChIJl5K4NETmrhIRdbqAvvQK9QI&refinement_paths%5B%5D=%2Fhomes&checkin=2021-09-10&checkout=2021-09-13" class="link-button blue">Search</a>
+          <h4>{{lodgingAirbnbTitle}}</h4>
+          <p>{{lodgingAirbnbText}}</p>
+          <a href="https://www.airbnb.com/s/Picarrou--Cintegabelle/homes?adults=2&place_id=ChIJl5K4NETmrhIRdbqAvvQK9QI&refinement_paths%5B%5D=%2Fhomes&checkin=2021-09-10&checkout=2021-09-13" class="link-button blue">{{lodgingAirbnbButton}}</a>
         </div>
       </div>
     </section>
@@ -419,15 +732,15 @@
     <section id="wedding-party" class="pane">
       <div class="pane-content">
         <div class="pane-title">
-          <h6>THE</h6>
-          <h2>WEDDING PARTY</h2>
+          <h6>{{weddingPartyPreTitle}}</h6>
+          <h2>{{weddingPartyTitle}}</h2>
           <span class="underline"></span>
         </div>
         <div class="pane-row">
-          <p>Once upon a time, in a land of frost and snow, two southern european souls crossed paths. Aurore, a French writer, and Pedro, a Portuguese musician, who both worked undercover as a researcher and an engineer, respectively.</p>
-	      <p>It all happened one night. Looking for the secrets of the Universe in beverages famous for enlightening the mind while sharpening the senses, Aurore and Pedro were, unknowingly, about to meet. The music was loud but their hearts beat stronger as their eyes found each other across the room. With a welcoming smile she invited him over. Cutting through the crowd, as a Portuguese navigator braving the seas, he came closer, tried a joke and they shared a laugh that will never end.</p>
-		  <p>Now they have decided to celebrate their bond with family and friends.</p>
-		  <p><b>They count on you to make this event magical!</b></p>
+          <p>{{weddingPartyStory1}}</p>
+	      <p>{{weddingPartyStory2}}</p>
+		  <p>{{weddingPartyStory3}}</p>
+		  <p><b>{{weddingPartyStory4}}</b></p>
         </div>
         <div class="us pane-row">
           <div class="party-person">
@@ -503,12 +816,12 @@
     <section id="registry" class="pane flex">
       <div class="pane-content">
         <div class="pane-title">
-          <h2>REGISTRY</h2>
+          <h2>{{registry}}</h2>
           <span class="underline"></span>
         </div>
         <div class="registry-description">
-          <p>The best present you could possibly give us is the celebration of our marriage. However, if you’d like to spoil us, we’ve picked out a few items pique our interests.</p>
-          <a href="https://thkfl.com/" target="_blank" class="link-button golden">Registry on Thankful</a>
+          <p>{{registryText}}</p>
+          <a href="https://thkfl.com/" target="_blank" class="link-button golden">{{registryButton}}</a>
         </div>
       </div>
     </section>
@@ -532,11 +845,11 @@
     <section id="photos" class="pane">
       <div class="pane-content">
         <div class="pane-title">
-          <h2>PHOTOS OF US</h2>
+          <h2>{{photos}}</h2>
           <span class="underline"></span>
         </div>
         <div class="pane-row">
-          <p>Just in case you forgot what we look like.</p>
+          <p>{{photosText}}</p>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
         <!-- <div class="pa-carousel-widget" style="width:100%; height:480px; display:none;" -->
@@ -607,36 +920,35 @@
         </div>
         <div class="faq-section">
           <div class="faq">
-            <h5><a onclick="onClickFaq(this)">When should I arrive and how long should I stay?</a></h5>
+            <h5><a onclick="onClickFaq(this)">{{faqQuestion1}}</a></h5>
             <div class="faq-answer">
-              <p>Most of the events kick off on Friday night and end on Sunday afternoon, but please enjoy the area for as long as you're able.</p>
+              <p>{{faqResponse1}}</p>
             </div>
           </div>
           <div class="faq">
-            <h5><a onclick="onClickFaq(this)">Any tips on what should I wear? </a></h5>
+            <h5><a onclick="onClickFaq(this)">{{faqQuestion2}}</a></h5>
             <div class="faq-answer">
-              <p>Weather permitting, the ceremony and parts of the reception will be outdoors, so shoes that can traverse gravel and grass would make your life easier.</p>
-              <p><b>Dress code</b>: Elegant.</p>
+              <p>{{faqResponse2}}</p>
+              <p>{{faqResponse21}}</p>
             </div>
           </div>
           <div class="faq">
-            <h5><a onclick="onClickFaq(this)">Should I pack anything special?</a></h5>
+            <h5><a onclick="onClickFaq(this)">{{faqQuestion3}}</a></h5>
             <div class="faq-answer">
-              <p>The wedding venue has a swimming pool so, if the weather is right and you would like to take a swim on Sunday, pack a bathing suit.</p>
+              <p>{{faqResponse3}}</p>
             </div>
           </div>
           <div class="faq">
-            <h5><a onclick="onClickFaq(this)">What is the weather like in the region this time of year?</a></h5>
+            <h5><a onclick="onClickFaq(this)">{{faqQuestion4}}</a></h5>
             <div class="faq-answer">
-              <p>In the beginning of September, Cintegabelle averages a <b>high of 24°C</b> and a <b>low of 14°C</b>. For a more detailed view 
-                <a href="https://fr.weatherspark.com/m/46191/9/M%C3%A9t%C3%A9o-habituelle-en-septembre-%C3%A0-Cintegabelle-France#Sections-Temperature">check this website</a>
+              <p>{{faqResponse4}}<a href="https://fr.weatherspark.com/m/46191/9/M%C3%A9t%C3%A9o-habituelle-en-septembre-%C3%A0-Cintegabelle-France#Sections-Temperature">{{faqResponse41}}</a>
               </p>
             </div>
           </div>
           <div class="faq">
-            <h5><a onclick="onClickFaq(this)">Will you be accommodating any diet restrictions?</a></h5>
+            <h5><a onclick="onClickFaq(this)">{{faqQuestion5}}</a></h5>
             <div class="faq-answer">
-              <p>We will accommodatingmodate vegetarian meals so please let us know in the RSVP if that is your preferred choice. If you have any other dietary concerns, feel free to let us know so we can explore options for you!</p>
+              <p>{{faqResponse5}}</p>
             </div>
           </div>
         </div>
