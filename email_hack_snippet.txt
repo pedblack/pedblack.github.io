@@ -1,0 +1,18 @@
+<div id="m_-7722091643202953837m_-6870124137989926298:4kt"style="display:block; background:url(&quot;https://lh3.googleusercontent.com/pw/ACtC-3eYmM3r0M5MkveC7oyHnlyu6T-niiEnbjJbhVWavyTK19wbxrzbxDO9dgec7SF3_IB-uhj5XnaEBmglk8Tz0R0skXiXQiXb0nWmyXOBI1dN9bhomsve3fph8Tkvf39BzY4zQeqUDa4G8PBh4vmXwWpmfQ=s1750-no?authuser=0&quot;) rgb(255,255,255); text-align: -webkit-center;padding: 1em 0;">
+   <div style="box-sizing:inherit;margin:6em 10%;max-width:54em;padding:6em 3em;text-align:center;background-color:#fff;">
+      <div class="adM">
+         <p style="text-align:center; margin-top: 0; margin-bottom: 3em; box-sizing:inherit;margin-left:auto;margin-right:auto;font-size:1.2em;max-width:45em;">Hello Thomas and Andrea</p>
+      </div>
+      <div style="box-sizing:inherit;margin-bottom:2em">
+         <h2 style="text-align:center;box-sizing:inherit;font-family:brandon-grotesque,&quot;Brandon Grotesque&quot;,Futura,sans-serif;font-size:2.1rem;font-weight:500;letter-spacing:0.2em;line-height:1.2;margin:0px 0px 0.25em;color:rgb(204,165,67);padding-left:5px;padding-right:5px">We are getting married</h2>
+         <span style="text-align:center;box-sizing:inherit;margin-left:auto;margin-right:auto;display:block;width:60px;border-bottom:4px solid rgb(204,165,67);border-top-color:rgb(204,165,67);border-right-color:rgb(204,165,67);border-left-color:rgb(204,165,67)"></span>
+      </div>
+      <div style="box-sizing:inherit">
+         <p style="text-align:center;margin-top:3em;box-sizing:inherit;margin-left:auto;margin-right:auto;font-size:1.2em;max-width:45em">And would love for you to be with us on our special day.</p>
+         <p style="text-align:center;box-sizing:inherit;margin-left:auto;margin-right:auto;font-size:1.2em;max-width:45em">We would like to invite you to our wedding, which will take place in France on September 11, 2021.</p>
+         <p style="text-align:center;box-sizing:inherit;margin-left:auto;margin-right:auto;font-size:1.2em;max-width:45em">You will find all the relevant information in our website:</p>
+         <a href="http://www.auroreandpedro.com?lang=en" style="letter-spacing:.1em;background:0 0;border:2px solid #fff;border-radius:0;display:inline-block;font-size:inherit;font-family:brandon-grotesque,'Brandon Grotesque',Futura,sans-serif;font-weight:500;margin:3em 0em;padding:.3em .7em;text-transform:uppercase;color:#cca543;border-color:#cca543;text-decoration:auto" target="_blank" data-saferedirecturl="https://www.google.com/url?q=http://www.pedroandaurore.com?lang%3Den&amp;source=gmail&amp;ust=1615243707865000&amp;usg=AFQjCNHbSu35-vbCEDjtPJPfnnU2EfBj0g">Visit our Website</a>
+         <p style="text-align:center;box-sizing:inherit;margin-left:auto;margin-right:auto;font-size:1.2em;max-width:45em">We kindly ask you to RSVP before April 15</p>
+      </div>
+   </div>
+</div>
