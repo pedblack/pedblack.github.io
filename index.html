@@ -568,7 +568,7 @@
             </div>
             <p class="larger">{{whoTitle}}</p>
             <p class="sans-caps">{{whoSubtitle}}</p>
-            <p><a class="link-button golden" target="_blank" href="https://withjoy.com/pedro-black-and-aurore-staes/rsvp">{{whoButton}}</a></p>
+            <p><a class="link-button golden" id="rsvpButton" target="_blank" href="https://withjoy.com/pedro-black-and-aurore-staes/rsvp">{{whoButton}}</a></p>
           </div>
         </div>
         <div class="pane-row">
@@ -581,7 +581,7 @@
             <p class="larger">{{whenTitle}}</p>
             <p class="sans-caps">{{whenSubtitle}}</p>
             <p>
-              <a title="" class=" link-button addthisevent-drop" id="atedrop1" onclick="onClickAddCalendar(this)">{{whenButton}}
+              <a title="" class=" link-button addthisevent-drop" id="calendarButton" onclick="onClickAddCalendar(this)">{{whenButton}}
               <span id="atedrop1-drop" class="addthisevent_dropdown" style="left: 0px; top: 44px; display: none;">
               <span class="ategoogle" onclick="location.href = 'https://www.addevent.com/event/dU5910787+google'">Google</span>
               <span class="ateical" onclick="location.href = 'https://www.addevent.com/event/dU5910787+apple'">Apple</span>
@@ -599,7 +599,7 @@
             </div>
             <p class="larger">{{whereTitle}}</p>
             <p class="sans-caps">{{whereSubtitle}}</p>
-            <p><a class="link-button golden" target="_blank" href="https://goo.gl/maps/iQnkpZiPeASzseeFA">{{whereButton}}</a></p>
+            <p><a class="link-button golden" id="whereButton" target="_blank" href="https://goo.gl/maps/iQnkpZiPeASzseeFA">{{whereButton}}</a></p>
           </div>
         </div>
       </div>
@@ -723,7 +723,7 @@
             <h3>{{travelPlane}}</h3>
             <p><b>{{travelPlaneZurich}}</b>{{travelPlaneZurichText}}</p>
             <p><b>{{travelPlaneLisbon}}</b>{{travelPlaneLisbonText}}</p>
-            <a href="https://www.google.com/flights#flt=.TLS.2021-09-10*TLS..2021-09-13" class="link-button find-flights" target="_blank">{{travelPlaneButton}}</a>
+            <a href="https://www.google.com/flights#flt=.TLS.2021-09-10*TLS..2021-09-13" class="link-button find-flights" id="travelPlaneButton" target="_blank">{{travelPlaneButton}}</a>
           </div>
           <div class="transit-type">
             <img id="car-svg" src="images/svg/car.svg">
@@ -731,7 +731,7 @@
             <p>{{travelBeyssacText1}}</p>
             <p>{{travelBeyssacText2}}</p>
             <p><b>{{travelBeyssacNote}}</b>{{travelBeyssacNoteText}}</p>
-            <a href="https://docs.google.com/spreadsheets/d/197qlTLFjb4-1KPVWA6n_bJCIl6q7xHMn5ostC4M_Eqc/edit#gid=714257730" class="link-button driving-directions" target="_blank">{{travelBeyssacButton}}</a>
+            <a href="https://docs.google.com/spreadsheets/d/197qlTLFjb4-1KPVWA6n_bJCIl6q7xHMn5ostC4M_Eqc/edit#gid=714257730" class="link-button driving-directions" id="travelBeyssacButton" target="_blank">{{travelBeyssacButton}}</a>
           </div>
         </div>
       </div>
@@ -752,14 +752,14 @@
           <h4>{{lodgingListTitle}}</h4>
           <p>{{lodgingListText}}</p>
           <div id="hotel-button">
-            <div><a href="https://docs.google.com/spreadsheets/d/197qlTLFjb4-1KPVWA6n_bJCIl6q7xHMn5ostC4M_Eqc/edit#gid=0" class="link-button blue">{{lodgingListButton}}</a></div>
+            <div><a href="https://docs.google.com/spreadsheets/d/197qlTLFjb4-1KPVWA6n_bJCIl6q7xHMn5ostC4M_Eqc/edit#gid=0" id="lodgingListButton" class="link-button blue">{{lodgingListButton}}</a></div>
           </div>
         </div>
         <div class="airbnb">
           <img class="round" src="images/airbnb.jpg">
           <h4>{{lodgingAirbnbTitle}}</h4>
           <p>{{lodgingAirbnbText}}</p>
-          <a href="https://www.airbnb.com/s/Picarrou--Cintegabelle/homes?adults=2&place_id=ChIJl5K4NETmrhIRdbqAvvQK9QI&refinement_paths%5B%5D=%2Fhomes&checkin=2021-09-10&checkout=2021-09-13" class="link-button blue">{{lodgingAirbnbButton}}</a>
+          <a href="https://www.airbnb.com/s/Picarrou--Cintegabelle/homes?adults=2&place_id=ChIJl5K4NETmrhIRdbqAvvQK9QI&refinement_paths%5B%5D=%2Fhomes&checkin=2021-09-10&checkout=2021-09-13" id="lodgingAirbnbButton" class="link-button blue">{{lodgingAirbnbButton}}</a>
         </div>
       </div>
     </section>
@@ -860,8 +860,8 @@
         </div>
         <div class="registry-description">
           <p>{{registryText}}</p>
-          <!-- <a href="https://thkfl.com/" target="_blank" class="link-button golden">{{}}</a> -->
-          <a target="_blank" class="link-button golden">{{registryButton}}</a>
+          <!-- <a href="https://thkfl.com/" id="registryButton" target="_blank" class="link-button golden">{{}}</a> -->
+          <a target="_blank" id="registryButton" class="link-button golden">{{registryButton}}</a>
         </div>
       </div>
     </section>
