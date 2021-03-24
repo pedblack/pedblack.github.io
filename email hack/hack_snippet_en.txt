@@ -14,7 +14,7 @@
          <a href="http://www.auroreandpedro.com?lang=en" style="letter-spacing:.1em;background:0 0;border:2px solid #fff;border-radius:0;display:inline-block;font-size:inherit;font-family:brandon-grotesque,'Brandon Grotesque',Futura,sans-serif;font-weight:500;margin:3em 0em;padding:.3em .7em;text-transform:uppercase;color:#cca543;border-color:#cca543;text-decoration:auto" target="_blank" data-saferedirecturl="https://www.google.com/url?q=http://www.pedroandaurore.com?lang%3Den&amp;source=gmail&amp;ust=1615243707865000&amp;usg=AFQjCNHbSu35-vbCEDjtPJPfnnU2EfBj0g">Visit our Website</a>
          <p style="text-align:center;box-sizing:inherit;margin-left:auto;margin-right:auto;font-size:1.2em;max-width:45em">You will need to enter your names to RSVP.</p>
          <p style="text-align:center;box-sizing:inherit;margin-left:auto;margin-right:auto;font-size:1.2em;max-width:45em">You are registered as:</p>
-         <p style="text-align:center;box-sizing:inherit;margin-left:auto;margin-right:auto;font-size:1.2em;max-width:45em"><b><i>Thomas Wittek</i></b><br><b><i>Andrea Stute</i></b></p>
+         <p style="text-align:center;box-sizing:inherit;margin-left:auto;margin-right:auto;font-size:1.2em;max-width:45em"><b><i>Name Surname</i></b><br><b><i>Name Surname</i></b></p>
          <p style="text-align:center;box-sizing:inherit;margin-left:auto;margin-right:auto;font-size:1.2em;max-width:45em">We kindly ask you to reply <b>before April 15</b>.</p>
       </div>
    </div>
