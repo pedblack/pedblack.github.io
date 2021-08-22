@@ -122,10 +122,11 @@
 		    weddingPartyBestman: "padrinho",
 		    weddingPartyBridesmaid: "madrinha",
 		    registry: "LISTA DE CASAMENTO",
-		    registryText: "O melhor presente que podíamos receber neste dia é a vossa presença. No entanto, se quiserem mimar-nos, partilharemos aqui brevemente uma lista de casamento com o que mais atrai o nosso interesse.",
-		    // registryText: "O melhor presente que podíamos receber neste dia é a vossa presença. No entanto, se quiserem mimar-nos, aqui fica uma lista do que mais atrai o nosso interesse.",
-            registryButton: "Brevemente",
-		    // registryButton: "A NOSSA LISTA",
+		    registryText1: "O melhor presente que podemos receber neste dia é a vossa presença. No entanto, se quiserem mimar-nos, aqui fica a nossa lista de casamento",
+			registryText2: "Como a importação para a Suíça é por vezes complicada, de forma a facilitar a logística, a compra dos presentes ficará a nosso cargo. Manter-vos-emos informados à medida que os formos recebendo",
+			registryText3: "Para que possam saber o que já foi oferecido, a lista será actualizada à medida que formos recebendo os vossos presentes.",
+		    registryButton: "VER A LISTA",
+		    registryLink: "https://docs.google.com/document/d/1LBI6xsTLdUgdr3iI_TIpICiZEjrzStymbhfi5vGRvJQ/edit?usp=sharing",
 		    photos: "FOTOGRAFIAS",
 		    photosText: "Caso se tenham esquecido de nós",
 		    faqQuestion1: "Quando chegar e quanto tempo ficar?",
@@ -220,9 +221,11 @@
 			weddingPartyBestman: "témoin",
             weddingPartyBridesmaid: "demoiselle d'honneur",
 			registry: "LISTE DE MARIAGE",
-            registryText: "Le plus beau cadeau que vous puissiez nous offrir est votre présence à notre mariage! Cependant, si vous voulez nous gâter encore plus, nous mettrons une urne le jour du mariage et nous allons bientôt poster ici une liste de mariage",
-            registryButton: "bientôt disponible",
-            // registryButton: "La Liste",
+            registryText1: "Le plus beau cadeau que vous puissiez nous offrir est votre présence à notre mariage! Cependant, si vous voulez nous gâter encore plus, voici notre liste de mariage",
+			registryText2: "Etant donné l'impossibilité physique de ramener par avion tous ces cadeaux et l'existence de taxes très importantes à l'importation de la France vers la Suisse, nous nous chargerons d'acheter directement les présents mais nous vous tiendrons informés dés que nous les aurons. ",
+			registryText3: "Afin que vous puissiez savoir ce qui a déjà été réservé, nous actualiserons la liste au fur et à mesure. Sachez qu'il est possible de participer seulement en partie à un cadeau.",
+            registryButton: "Voir La Liste",
+  		    registryLink: "https://docs.google.com/document/d/1RmOgqKeHJDKz1PemSVkzmylzYc5LgdaW0Etm9VRTHEM/edit?usp=sharing",
 			photos:"NOS PHOTOS",
 			photosText: "Pour ne pas nous oublier d'ici à la cérémonie",  
             faqQuestion1: "Quand dois-je arriver et combien de temps dois-je rester ?",
@@ -316,10 +319,11 @@
 			weddingPartyBestman: "best man",
             weddingPartyBridesmaid: "bridesmaid",
 			registry: "REGISTRY",
-			registryText: "The best present you could possibly give us is the celebration of our marriage. However, if you’d like to spoil us, we will soon create our wedding registry with a few items that pique our interests",
-            // registryText: "The best present you could possibly give us is the celebration of our marriage. However, if you’d like to spoil us, we’ve picked out a few items that pique our interests",
-            registryButton: "Comming soon",
-            // registryButton: "Our Registry",
+			registryText1: "The best present you could possibly give us is the celebration of our marriage. However, if you’d like to spoil us, here is our wedding registry",
+			registryText2: "For logistical reasons, we will take care of buying the presents ourselves. But we will keep you posted on when we recieve them",
+			registryText3: "We will be updating the list so that you can see what was already offered",
+            registryButton: "Our Registry",
+    		registryLink: "https://docs.google.com/document/d/13kbBRrRIrqCVO365JwB9yCNpqgRyKEkF8LQkLNIXiaE/edit?usp=sharing",
 			photos:"PHOTOS OF US",
 			photosText: "Just in case you forgot what we look like",  
             faqQuestion1: "When should I arrive and how long should I stay?",
@@ -415,8 +419,11 @@
 		        .replaceAll("{{weddingPartyBestman}}", data.weddingPartyBestman)
 		        .replaceAll("{{weddingPartyBridesmaid}}", data.weddingPartyBridesmaid)
 		        .replaceAll("{{registry}}", data.registry)
-		        .replace("{{registryText}}", data.registryText)
+		        .replace("{{registryText1}}", data.registryText1)
+		        .replace("{{registryText2}}", data.registryText2)
+		        .replace("{{registryText3}}", data.registryText3)
 		        .replace("{{registryButton}}", data.registryButton)
+		        .replace("{{registryLink}}", data.registryLink)
          		.replace("{{photos}}", data.photos)
          		.replace("{{photosText}}", data.photosText)
          		.replace("{{faqQuestion1}}", data.faqQuestion1)
@@ -506,7 +513,7 @@
             </div>
             <ul id="mobile-menu" class="centered-navigation-menu">
               <li class="nav-link" onclick="hideMobileMenu()">
-                <a href="#overview">{{rsvp}}</a>
+                <a href="#registry">{{registry}}</a>
               </li>
               <li class="nav-link" onclick="hideMobileMenu()">
                 <a href="#schedule">{{schedule}}</a>
@@ -859,9 +866,11 @@
           <span class="underline"></span>
         </div>
         <div class="registry-description">
-          <p>{{registryText}}</p>
+          <p>{{registryText1}}</p>
+          <p>{{registryText2}}</p>
+          <p>{{registryText3}}</p>
           <!-- <a href="https://thkfl.com/" id="registryButton" target="_blank" class="link-button golden">{{}}</a> -->
-          <a target="_blank" id="registryButton" class="link-button golden">{{registryButton}}</a>
+          <a href={{registryLink}} target="_blank" id="registryButton" class="link-button golden">{{registryButton}}</a>
         </div>
       </div>
     </section>
